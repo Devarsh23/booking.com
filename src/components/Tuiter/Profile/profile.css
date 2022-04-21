@@ -1,0 +1,39 @@
+.wd-color-white {
+    color:white;
+}
+.wd-username-font{
+    font-size: 20px;
+}
+.wd-font{
+    font-size: 13px;
+}
+.wd-border-black {
+    border-style: solid;
+    border-color: black;
+}
+.wd-container {
+    position: absolute;
+}
+.wd-main{
+    width: 100%;
+}
+.wd-overlay {
+    position: relative;
+    bottom: 70px;
+    left:10px;
+}
+.wd-right {
+    float: right;
+}
+
+.wd-save {
+    background-color: white;
+}
+
+.wd-color-black {
+    color: black;
+}
+
+.btn:hover{
+    color:black !important;
+}

@@ -1,0 +1,126 @@
+.wd-body{
+    padding-left: 16px;
+    border: 1px solid rgb(47, 51, 54);
+}
+.wd-title {
+    color: white;
+    font-size: 20px;
+    padding-left: 16px;
+    padding-top: 12px;
+}
+.wd-user {
+    color: rgb(110, 118, 125);
+    font-size: 13px;
+    padding: 16px;
+}
+.wd-boundary {
+    border: 0;
+    border-top: 1px solid rgb(47, 51, 54);
+    margin-left: -16px;
+}
+.wd-container {
+    display: flex;
+    width: 50%;
+    overflow: hidden;
+}
+.wd-column {
+    display: flex;
+    flex-direction: column;
+}
+.wd-left-element {
+    flex-basis: 10%;
+    padding-left: 16px;
+}
+.wd-right-element {
+    padding-left: 12px;
+    flex-flow: column wrap;
+}
+.wd-avatar {
+    border-radius: 48px;
+}
+.wd-name {
+    padding-top: 12px;
+    font-size: 15px;
+    color: white;
+}
+.wd-handle {
+    color: rgb(110, 118, 125);
+    font-size: 15px;
+}
+.wd-namediv {
+    flex: 0 0 10%;
+}
+.wd-textdiv {
+    flex: 0 0 30%;
+    width: 506px;
+}
+.wd-text {
+    color: white;
+    font-size: 15px;
+}
+.wd-div-image{
+    padding-top: 12px;
+}
+.wd-image {
+    width: 504px;
+    height: 264px;
+    border:1px solid rgb(110, 118, 125);
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+}
+.wd-text-div {
+    margin-top:-4px;
+    flex: 0 0 60%;
+    padding: 12px;
+    width: 480px;
+    border: 1px solid rgb(110, 118, 125);
+    border-top: none;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+.wd-text-title {
+    padding-top: 12px;
+    color: white;
+    font-size: 15px;
+}
+.wd-post-text {
+    color: rgb(110, 118, 125);
+    font-size: 15px;
+}
+.wd-icons {
+    padding-top: 12px;
+    text-align: justify;
+    -ms-text-justify: distribute-all-lines;
+    text-justify: distribute-all-lines;
+    width:400px;
+}
+.wd-comment-div{
+    vertical-align: top;
+    display: inline-block;
+    *display: inline;
+}
+.wd-heart-div, .wd-retweet-div, .wd-share-div {
+    vertical-align: top;
+    display: inline-block;
+    *display: inline;
+}
+.wd-heart {
+    color: red;
+}
+.wd-retweet,.wd-share,.wd-comment {
+    color: rgb(110, 118, 125);
+}
+.wd-heart-text {
+    color: red;
+    padding-left: 12px;
+}
+.wd-retweet-text,.wd-share-text,.wd-comment-text {
+    color:rgb(110, 118, 125);
+    padding-left: 12px;
+}
+.stretch {
+    width: 100%;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0
+}

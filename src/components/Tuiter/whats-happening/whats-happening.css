@@ -1,0 +1,7 @@
+textarea {
+    overflow: auto;
+    caret-color: white;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+}

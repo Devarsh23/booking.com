@@ -1,0 +1,68 @@
+.wd-fg-color-black { color: black; }
+.wd-fg-color-white { color: white; }
+.wd-fg-color-blue { color: blue; }
+.wd-fg-color-red { color: #ff7070; }
+.wd-fg-color-green { color: green; }
+.wd-fg-color-light-gray { color: rgb(110, 118, 125); }
+.wd-bg-color-yellow
+{ background-color: #ffff07; }
+.wd-bg-color-black-twitter
+{ background-color: #14171A; }
+.wd-bg-color-blue
+{ background-color:blue; }
+.wd-bg-color-black
+{ background-color:black; }
+.wd-bg-color-red
+{ background-color: #ff7070; }
+.wd-bg-color-green
+{ background-color: green; }
+.wd-border-fat
+{ border-width: 20px 30px 20px 30px; }
+.wd-border-thin { border-width: 4px; }
+.wd-border-solid { border-style: solid; }
+.wd-border-dashed { border-style: dashed; }
+.wd-border-yellow { border-color: #ffff07; }
+.wd-border-red { border-color: #ff7070; }
+.wd-border-blue { border-color:blue; }
+::placeholder {
+    font-size: 20px;
+}
+input[type="text"], textarea {
+    padding-left: 60px;
+}
+
+.wd-search .form-control {
+    padding-left: 50px;
+}
+
+.wd-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+}
+
+.wd-topic {
+    font-size: 13px;
+}
+.wd-fontsize {
+    font-size: 15px;
+}
+.wd-iconsize {
+    font-size: 20px;
+}
+.wd-cogsize {
+    font-size: 30px;
+}
+.wd-testsize{
+    font-size: 18px;
+}
+.wd-moreicon {
+    font-size: 12px;
+    margin-left: -7px;
+}
+.wd-rounded-borders {
+    border-radius: 15px;
+}
+.custom-tab {
+    border-bottom: 6px solid blue !important;
+    border-radius: 6px !important;
+}
