@@ -1,22 +1,19 @@
 import React from "react";
-import "../ExploreScreen/explore.css"
 import {Link} from "react-router-dom";
 
-const TuitListItem = ({param, callbackFn}) => {
-    function update(param) {
-        callbackFn.callbackFn(param);
-    }
-    return (
-        <div className="container">
-            <div className="row mt-2">
-                <div className="col-2 ps-3 me-3" style={{width:'100%'}}>
-                    <label className="wd-fg-color-white h6 fw-bold">{param.legs[0].carriers.marketing[0].name}&nbsp;</label>
-                    <label className="wd-topic wd-fg-color-light-gray">&nbsp; {param.legs[0].segments[0].flightNumber}</label>
+const FlightDetails = ({flightDetails}) => {
+    return(
+        <>
+            <div className="container">
+                <div className="row mt-2">
+                    <div className="col-2 ps-3 me-3" style={{width:'100%'}}>
+                        <label className="wd-fg-color-white h6 fw-bold">{flightDetails.legs[0].carriers.marketing[0].name}&nbsp;</label>
+                        <label className="wd-topic wd-fg-color-light-gray">&nbsp; {flightDetails.legs[0].segments[0].flightNumber}</label>
+                    </div>
                 </div>
-            </div>
-            <div className="row border-bottom border-secondary">
-                <div className="col-2"><b>{param.legs[0].origin.displayCode}</b></div>
-                <div className="col-2">
+                <div className="row">
+                    <div className="col-4"><b>{flightDetails.legs[0].origin.name}({flightDetails.legs[0].origin.displayCode})</b></div>
+                    <div className="col-2">
                     <span className="plane">
                         <svg
                             clipRule="evenodd"
@@ -45,17 +42,24 @@ const TuitListItem = ({param, callbackFn}) => {
                           </g>
                         </svg>
                     </span>
+                    </div>
+                    <div className="col-3"> <b>{flightDetails.legs[0].destination.name}({flightDetails.legs[0].destination.displayCode})</b></div>
+                    <div className="col-3"><b>${flightDetails.pricing_options[0].price.amount}</b></div>
                 </div>
-                <div className="col-3"> <b>{param.legs[0].destination.displayCode}</b></div>
-                <div className="col-3"><b>${param.pricing_options[0].price.amount}</b></div>
-                <div className="col-2">
-                    <Link to={{pathname: `/details/${param.id}`}}>
-                        <button className="primary rounded-pill" onClick={update.bind(this, param)}>Details</button>
+                <div>
+                    <div>Arrival - {flightDetails.legs[0].arrival}</div>
+                    <div>Departure - {flightDetails.legs[0].departure}</div>
+                    <div>Duration of flight - {flightDetails.legs[0].durationInMinutes} Minutes</div>
+                    <div>Number of stops - {flightDetails.legs[0].stopCount} </div>
+                </div>
+                <div className= "border-top border-secondary">
+                    <Link to="/login">
+                        <button className="primary rounded-pill mt-2">Book</button>
                     </Link>
                 </div>
             </div>
-        </div>
+        </>
     );
 }
 
-export default TuitListItem;
+export default FlightDetails;

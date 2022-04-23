@@ -1,0 +1,27 @@
+[
+  {
+    "id":1,
+    "discount": "5%",
+    "airline": "United"
+  },
+  {
+    "id":2,
+    "discount": "2%",
+    "airline": "Delta"
+  },
+  {
+    "id":3,
+    "discount": "3%",
+    "airline": "Air India"
+  },
+  {
+    "id":4,
+    "discount": "4%",
+    "airline": "Lufthansa"
+  },
+  {
+    "id":5,
+    "discount": "1%",
+    "airline": "Turkish Airlines"
+  }
+]

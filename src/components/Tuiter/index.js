@@ -5,6 +5,7 @@ import tuitsReducer from "./reducers/tuits-reducer";
 import profileReducer from "./reducers/profile-reducer";
 import {combineReducers, createStore} from "redux";
 import {Provider} from "react-redux";
+import homeScreen from "./home-screen";
 
 const reducer = combineReducers({
     tuits: tuitsReducer, who: whoReducer, profileReducer: profileReducer

@@ -1,10 +1,13 @@
 import React from "react";
+import HomeScreen from "../home-screen";
 
-const Navigationsidebar = ({}) => {
+// const handleClick = () => {    console.log('this is:');
+//     <HomeScreen passengers="r"/>
+//     console.log("thai ja");}
+const Navigationsidebar = ({activeParam, size}) => {
             return (
                 <>
                     <div className="list-group">
-                        <form>
                             <div className="form-group">
                                 <label htmlFor="numberOfPassengers">Passengers</label>
                                 <input type="number" className="form-control" id="numberOfPassengers"
@@ -33,8 +36,10 @@ const Navigationsidebar = ({}) => {
                                 </input>
                             </div>
                             <br></br>
-                            <button type="submit" className="btn btn-primary rounded-pill">Submit</button>
-                        </form>
+                            <button type="submit" className="btn btn-primary rounded-pill"
+                            onClick={() => {
+                                App()
+                            }}>Submit</button>
                     </div>
                 </>
             );
