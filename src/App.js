@@ -12,6 +12,17 @@ import SignUp from "./components/Tuiter/SignUpComponent";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {useState} from "react";
 import LoginComponent from "./components/Tuiter/LoginComponent";
+import {Provider} from "react-redux";
+import {combineReducers, createStore} from "redux";
+import tuitsReducer from "./components/Tuiter/reducers/tuits-reducer";
+import whoReducer from "./components/Tuiter/reducers/who-reducer";
+import profileReducer from "./components/Tuiter/reducers/profile-reducer";
+import loginReducers from "./components/Tuiter/reducers/login-reducers";
+
+const reducer = combineReducers({
+    tuits: loginReducers, who: whoReducer, profileReducer: profileReducer
+});
+const store = createStore(reducer);
 
 function App() {
     const [flightDetails, setFlightDetails] = useState(1);
@@ -19,6 +30,7 @@ function App() {
         setFlightDetails(data);
     }
     return (
+        <Provider store={store}>
         <BrowserRouter>
             <div className="container">
                 <Routes>
@@ -43,10 +55,17 @@ function App() {
                         <Route path="login"
                                element={<LoginComponent/>}>
                         </Route>
+                        <Route path="admin"
+                               element={<LoginComponent/>}>
+                        </Route>
+                        <Route path="airline"
+                               element={<LoginComponent/>}>
+                        </Route>
                     </Route>
                 </Routes>
             </div>
         </BrowserRouter>
+        </Provider>
     );
 }
 
