@@ -15,7 +15,7 @@ const Navigationsidebar = ({setPassengers, setOrigin, setDestination, setDate}) 
         <>
             <div className="list-group p-3 wd-blueBG">
                 <div>
-                    <h5> Filters</h5>
+                    <h5>Filters</h5>
                 </div>
                 <div>
                     <label htmlFor="numberOfPassengers">Number of Passengers</label><br/>

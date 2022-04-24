@@ -10,12 +10,12 @@ const TuitListItem = ({param, callbackFn}) => {
         <div className="container">
             <div className="row mt-2">
                 <div className="col-2 ps-3 me-3" style={{width:'100%'}}>
-                    <label className="wd-fg-color-white h6 fw-bold">{param.legs[0].carriers.marketing[0].name}&nbsp;</label>
+                    <label className="wd-fg-color-blue h6 fw-bold">{param.legs[0].carriers.marketing[0].name}&nbsp;</label>
                     <label className="wd-topic wd-fg-color-light-gray">&nbsp; {param.legs[0].segments[0].flightNumber}</label>
                 </div>
             </div>
             <div className="row border-bottom border-secondary">
-                <div className="col-2"><b>{param.legs[0].origin.displayCode}</b></div>
+                <div className="col-2"><b>&nbsp;{param.legs[0].origin.displayCode}</b></div>
                 <div className="col-2">
                     <span className="plane">
                         <svg
