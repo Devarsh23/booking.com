@@ -12,6 +12,7 @@ import SignUp from "./components/Tuiter/SignUpComponent";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {useState} from "react";
 import LoginComponent from "./components/Tuiter/LoginComponent";
+import SignUpComponent from "./components/Tuiter/SignUpComponent";
 import {Provider} from "react-redux";
 import {combineReducers, createStore} from "redux";
 import tuitsReducer from "./components/Tuiter/reducers/tuits-reducer";
@@ -53,13 +54,22 @@ function App() {
                                element={<SignUp/>}>
                         </Route>
                         <Route path="login"
-                               element={<LoginComponent/>}>
+                               element={<LoginComponent usertype="user"/>}>
                         </Route>
                         <Route path="admin"
-                               element={<LoginComponent/>}>
+                               element={<LoginComponent usertype="admin"/>}>
                         </Route>
                         <Route path="airline"
-                               element={<LoginComponent/>}>
+                               element={<LoginComponent usertype="airline"/>}>
+                        </Route>
+                        <Route path="user/register"
+                               element={<SignUpComponent userStatus="user"/>}>
+                        </Route>
+                        <Route path="admin/register"
+                               element={<SignUpComponent userStatus="admin"/>}>
+                        </Route>
+                        <Route path="airline/register"
+                               element={<SignUpComponent userStatus="airline"/>}>
                         </Route>
                     </Route>
                 </Routes>

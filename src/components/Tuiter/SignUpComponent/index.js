@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 import {findlogin, createuser} from "../../actions/actions";
 
 
-const SignUp = () => {
+const SignUp = ({userStatus}) => {
     const [newUser, setnewUser] = useState({user : 'New User'});
     const tuits = useSelector(state => state.tuits);
     const dispatch = useDispatch();
@@ -17,7 +17,7 @@ const SignUp = () => {
     //
     //     }
     //     useEffect(findLogin, []);
-    useEffect(() => findlogin(dispatch),[]);
+    // useEffect(() => findlogin(dispatch),[]);
     // console.log(tuits);
 
     const [firstname, setfirstname] = useState(1);
@@ -26,20 +26,39 @@ const SignUp = () => {
     const [password, setpassword] = useState(1);
     function submitted() {
         console.log("Hello");
-        console.log("last name --> ", lastname);
-        console.log("First name --> ", firstname);
-        console.log(email);
-        console.log(password);
         //tuitsModel.create({"firstname" : firstname});
         // setnewUser({...newUser,firstname})
         // return createuser(dispatch, newUser);
-        createuser(dispatch,{firstname});
+        // var isUser;
+        // var isAdmin;
+        // var isAirline;
+        if (userStatus === "user") {
+            var isUser = "true";
+            var isAdmin = "false";
+            var isAirline = "false";
+        }
+        else if (userStatus === "admin") {
+            isAdmin = "true";
+            isUser = "false";
+            isAirline = "false";
+        }
+        else if (userStatus === "airline") {
+            isAirline = "true";
+            isUser = "false";
+            isAdmin = "false";
+        }
+        else {
+            isAirline = "false";
+            isUser = "true";
+            isAdmin = "false";
+        }
+        createuser(dispatch,{firstname,lastname,email,password,isUser,isAdmin,isAirline});
     }
 
     return (
         <div className="col-4">
-            <form>
                 <h3>Sign Up</h3>
+            <form>
                 <div className="form-group">
                     <label>First name</label>
                     <input type="text" className="form-control" placeholder="First name" onChange={event =>
@@ -65,8 +84,9 @@ const SignUp = () => {
                 </div>
                 <br></br>
                 <button type="submit" className="btn btn-primary btn-block" onClick={submitted}>Sign Up</button>
+
                 <p className="forgot-password text-right">
-                    Already registered? <Link to="/login">sign in</Link>
+                    Already registered as {userStatus}? <Link to="/login">sign in</Link>
                 </p>
             </form>
         </div>
