@@ -4,10 +4,10 @@ import {Link} from "react-router-dom";
 const FlightDetails = ({flightDetails}) => {
     return(
         <>
-            <div className="container">
+            <div className="container wd-fg-color-black wd-whiteBG">
                 <div className="row mt-2">
                     <div className="col-2 ps-3 me-3" style={{width:'100%'}}>
-                        <label className="wd-fg-color-white h6 fw-bold">{flightDetails.legs[0].carriers.marketing[0].name}&nbsp;</label>
+                        <label className="wd-fg-color-blue h6 fw-bold">{flightDetails.legs[0].carriers.marketing[0].name}&nbsp;</label>
                         <label className="wd-topic wd-fg-color-light-gray">&nbsp; {flightDetails.legs[0].segments[0].flightNumber}</label>
                     </div>
                 </div>

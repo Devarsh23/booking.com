@@ -15,13 +15,13 @@ code {
 }
 
 :root {
-  --white: #FFFFFF;
+  --white: #FFFFFF ;
   --lightestGrey: #F6F6F6;
   --lightGrey: rgb(110, 118, 125);
   --darkGrey: rgb(47, 51, 54);
   --lightBlue: rgb(29,161,242);
   --twitterBlue: dodgerblue;
-  background-color: white;
+  background-color: white !important;
 }
 
 container {
