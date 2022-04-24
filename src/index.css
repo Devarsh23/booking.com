@@ -229,3 +229,7 @@ input.wd-searchBox:focus{ outline: none;}
 
   border: 3px solid #000 !important;
 }
+
+wd-border {
+  border: 2px solid black;
+}

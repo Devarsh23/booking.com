@@ -56,37 +56,37 @@ const SignUp = ({userStatus}) => {
     }
 
     return (
-        <div className="col-4">
-                <h3>Sign Up</h3>
+        <div className="container p-5 col-12 col-sm-10 col-md-8 col-lg-6 col-xl-4 col-xxl-4">
+                <h3 className="wd-blueFont">Sign Up</h3>
             <form>
                 <div className="form-group">
-                    <label>First name</label>
-                    <input type="text" className="form-control" placeholder="First name" onChange={event =>
+                    <label className="wd-blueFont wd-fontBold">First name</label>
+                    <input type="text" className="form-control border" placeholder="First name" onChange={event =>
                         setfirstname(event.target.value)}/>
                 </div>
 
                 <div className="form-group">
-                    <label>Last name</label>
-                    <input type="text" className="form-control" placeholder="Last name" onChange={event =>
+                    <label className="wd-blueFont wd-fontBold">Last name</label>
+                    <input type="text" className="form-control border" placeholder="Last name" onChange={event =>
                         setlastname(event.target.value)}/>
                 </div>
 
                 <div className="form-group">
-                    <label>Email address</label>
-                    <input type="email" className="form-control" placeholder="Enter email" onChange={event =>
+                    <label className="wd-blueFont wd-fontBold">Email address</label>
+                    <input type="email" className="form-control border" placeholder="Enter email" onChange={event =>
                         setemail(event.target.value)} />
                 </div>
 
                 <div className="form-group">
-                    <label>Password</label>
-                    <input type="password" className="form-control" placeholder="Enter password" onChange={event =>
+                    <label className="wd-blueFont wd-fontBold">Password</label>
+                    <input type="password" className="form-control border" placeholder="Enter password" onChange={event =>
                         setpassword(event.target.value)}/>
                 </div>
                 <br></br>
                 <button type="submit" className="btn btn-primary btn-block" onClick={submitted}>Sign Up</button>
 
-                <p className="forgot-password text-right">
-                    Already registered as {userStatus}? <Link to="/login">sign in</Link>
+                <p className="forgot-password text-right wd-blueFont ">
+                    Already registered as {userStatus}? <Link to="/login">Sign in</Link>
                 </p>
             </form>
         </div>

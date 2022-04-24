@@ -14,7 +14,9 @@ const HomeScreen = (callbackFn) => {
             <div className="wd-whiteBG">
                 <div className="row mt-3">
                     <div className="col">
-                        <h3 className="wd-blueFont"><i className="fa fa-plane"></i> Book My Flight</h3>
+
+                        <h3 className="wd-blueFont"><Link to ="/tuiter/home"><i className="fa fa-plane wd-blueFont"></i></Link> Book My Flight</h3>
+
 
                     </div>
                     <div className="col wd-blueFont">
