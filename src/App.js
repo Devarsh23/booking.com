@@ -33,7 +33,7 @@ function App() {
     return (
         <Provider store={store}>
         <BrowserRouter>
-            <div className="container">
+            <div className="container wd-whiteBG">
                 <Routes>
                     <Route path="/">
                         <Route path="tuiter"
