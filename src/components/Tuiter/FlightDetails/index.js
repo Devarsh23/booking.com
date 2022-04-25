@@ -1,9 +1,20 @@
-import React from "react";
-import {Link} from "react-router-dom";
-
+import React, {useEffect} from "react";
+import {useDispatch, useSelector} from "react-redux";
+import {findDeals, createuser, findlogin,findAirlines} from "../../actions/actions";
+// import * as service from "../../services/services"
+import {Link, useLocation, useNavigate} from "react-router-dom";
+import {Location} from "react-router-dom";
+import HeaderComponent from "../HeaderComponent";
 const FlightDetails = ({flightDetails}) => {
+    const data = useSelector(state => state.airlines);
+    console.log(data)
+    const dispatch = useDispatch();
+    useEffect(() => findAirlines(dispatch),[]);
+
+    const location = useLocation();
     return(
         <>
+            <HeaderComponent location={location}/>
             <div className="container">
                 <div className="row mt-2">
                     <div className="col-2 ps-3 me-3" style={{width:'100%'}}>

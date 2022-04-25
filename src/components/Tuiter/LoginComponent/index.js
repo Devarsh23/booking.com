@@ -3,20 +3,35 @@ import React, {useState, useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 // import * as services from "../../services/services"
 import {findlogin, createuser} from "../../actions/actions";
+import { useNavigate } from 'react-router-dom';
 
 const Login = ({usertype}) => {
-    const data = useSelector(state => state.tuits);
+    const navigate = useNavigate();
+    const data = useSelector(state => state.login);
+    console.log(data)
     const dispatch = useDispatch();
     useEffect(() => findlogin(dispatch),[]);
     const [email, setemail] = useState(1);
     const [password, setpassword] = useState(1);
-    function submitted() {
+    function useSubmitted() {
         for (let i = 0; i < data.length; i++) {
             if (data[i].email === email) {
                 if (data[i].password === password) {
-                    console.log("Sucessfully logged in");
+                    if (data[i].isAdmin) {
+                        navigate('/admin-form');
+                        console.log("We are in if of admin")
+                        var flag = "true";
+
+                    }
+                    else {
+                        navigate('/tuiter/home', {state: data[i]});
+                        var flag = "true";
+                    }
                 }
             }
+        }
+        if (flag != "true") {
+            alert("Wrong UserID or password please try again");
         }
     }
 
@@ -37,7 +52,7 @@ const Login = ({usertype}) => {
                         setpassword(event.target.value)}/>
                 </div>
                 <br></br>
-                <button type="submit" className="btn btn-primary btn-block" onClick={submitted}>Submit</button>
+                <button type="submit" className="btn btn-primary btn-block" onClick={useSubmitted}>Submit</button>
                 <br></br>
                 <label>New User? <Link to={{pathname: `/${usertype}/register`}}>Click here to Register as new {usertype}</Link>
                     </label>

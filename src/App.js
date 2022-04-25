@@ -19,9 +19,12 @@ import tuitsReducer from "./components/Tuiter/reducers/tuits-reducer";
 import whoReducer from "./components/Tuiter/reducers/who-reducer";
 import profileReducer from "./components/Tuiter/reducers/profile-reducer";
 import loginReducers from "./components/Tuiter/reducers/login-reducers";
+import dealsReducers from "./components/Tuiter/reducers/deals-reducer";
+import AdminPage from "./components/Tuiter/AdminPage";
+import airlineReducers from "./components/Tuiter/reducers/airline-reducers";
 
 const reducer = combineReducers({
-    tuits: loginReducers, who: whoReducer, profileReducer: profileReducer
+    tuits: loginReducers, who: whoReducer, profileReducer: profileReducer, deals: dealsReducers, login: loginReducers, airlines: airlineReducers
 });
 const store = createStore(reducer);
 
@@ -71,6 +74,11 @@ function App() {
                         <Route path="airline/register"
                                element={<SignUpComponent userStatus="airline"/>}>
                         </Route>
+                        <Route path="/admin-form"
+                               element={<AdminPage/>}>
+                        </Route>
+                        <Route path="/profile"
+                        element={<Profile/>}></Route>
                     </Route>
                 </Routes>
             </div>

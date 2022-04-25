@@ -3,7 +3,7 @@ import TuitListItem from "./tuit-list-item";
 import data from "./ApiData.json";
 import axios from 'axios';
 
-const TuitList = ({passengers, origin, destination, date, callbackFn}) => {
+const TuitList = ({passengers, origin, destination, date, callbackFn,userdata}) => {
     const options = {
         method: 'GET',
         url: 'https://skyscanner44.p.rapidapi.com/search-extended',
@@ -36,13 +36,24 @@ const TuitList = ({passengers, origin, destination, date, callbackFn}) => {
     // });
     // console.log(test);
     test = data[0].itineraries.results;
-    return (
-        <ul className="ttr-tuits list-group">
-            {
-                test.map && test.map(param => <TuitListItem key={param.id} param={param} callbackFn={callbackFn}/>)
-            }
-        </ul>
-    );
+    if (userdata === null) {
+        return (
+            <ul className="ttr-tuits list-group">
+                {
+                    test.map && test.map(param => <TuitListItem key={param.id} param={param} callbackFn={callbackFn}/>)
+                }
+            </ul>
+        );
+    }
+    else {
+        return (
+            <ul className="ttr-tuits list-group">
+                {
+                    test.map && test.map(param => <TuitListItem key={param.id} param={param} callbackFn={callbackFn} userdata = {userdata}/>)
+                }
+            </ul>
+        );
+    }
 }
 
 export default TuitList;

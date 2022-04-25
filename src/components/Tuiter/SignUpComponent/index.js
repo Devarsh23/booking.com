@@ -3,9 +3,11 @@ import {useDispatch, useSelector} from "react-redux";
 import {Link} from "react-router-dom";
 // import * as services from "../../services/services"
 import {findlogin, createuser} from "../../actions/actions";
+import {useNavigate} from "react-router-dom";
 
 
 const SignUp = ({userStatus}) => {
+    const navigate = useNavigate();
     const [newUser, setnewUser] = useState({user : 'New User'});
     const tuits = useSelector(state => state.tuits);
     const dispatch = useDispatch();
@@ -53,6 +55,8 @@ const SignUp = ({userStatus}) => {
             isAdmin = "false";
         }
         createuser(dispatch,{firstname,lastname,email,password,isUser,isAdmin,isAirline});
+        navigate('/login');
+
     }
 
     return (
