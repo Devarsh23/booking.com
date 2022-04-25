@@ -195,7 +195,7 @@ input.wd-searchBox:focus{ outline: none;}
 }
 
 .wd-blueBG{
-  background-color: #000080;
+  background-color: #000080 !important;
 }
 
 .wd-blueFont{
