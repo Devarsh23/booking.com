@@ -49,25 +49,30 @@ export const findAirlines = async () => {
 }
 
 export const flightSearchResults = async (details) => {
-    //console.log(details)
-    // const options = {
-    //     method: 'GET',
-    //     url: 'https://skyscanner44.p.rapidapi.com/search-extended',
-    //     params: {
-    //         adults: details.passengers,
-    //         origin: details.origin,
-    //         destination: details.destination,
-    //         departureDate: details.date,
-    //         currency: 'USD'
-    //     },
-    //     headers: {
-    //         'X-RapidAPI-Host': 'skyscanner44.p.rapidapi.com',
-    //         'X-RapidAPI-Key': '96f6331ecamsh89f106ecd061eb5p16708djsnad3ed151876a'
-    //     }
-    // };
-    // const response = await axios.request(options);
-    // return response.data.itineraries.results;
-    return{}
+    if (typeof details === 'undefined') {
+        return {}
+    }
+    else {
+        // const options = {
+        //     method: 'GET',
+        //     url: 'https://skyscanner44.p.rapidapi.com/search-extended',
+        //     params: {
+        //         adults: details.passengers,
+        //         origin: details.origin,
+        //         destination: details.destination,
+        //         departureDate: details.date,
+        //         currency: 'USD'
+        //     },
+        //     headers: {
+        //         'X-RapidAPI-Host': 'skyscanner44.p.rapidapi.com',
+        //         'X-RapidAPI-Key': '96f6331ecamsh89f106ecd061eb5p16708djsnad3ed151876a'
+        //     }
+        // };
+        // const response = await axios.request(options);
+        // return response.data.itineraries.results;
+        return {}
+    }
+    //return{}
 }
 
 export const updateInitial = async (singleValue) => {

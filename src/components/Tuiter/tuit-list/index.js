@@ -9,8 +9,11 @@ const TuitList = ({passengers, origin, destination, date, callbackFn, userdata})
     const dispatch = useDispatch();
     useEffect(() => findSingleValue(dispatch),[]);
     //let test = data[0].itineraries.results;
-    useEffect(() => apiresults(dispatch,filterData),[])
+
+
     const filterData = useSelector(state => state.singleValue[0]);
+    useEffect(() => apiresults(dispatch,filterData),[filterData])
+    console.log("check --> ", filterData);
     //console.log("tuit from redux -->", filterData?.passengers, filterData?.origin, filterData?.destination, filterData?.date);
     const test = useSelector(state => state.results);
     if (userdata === null) {
