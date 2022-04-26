@@ -8,7 +8,6 @@ import { useNavigate } from 'react-router-dom';
 const Login = ({usertype}) => {
     const navigate = useNavigate();
     const data = useSelector(state => state.login);
-    console.log(data)
     const dispatch = useDispatch();
     useEffect(() => findlogin(dispatch),[]);
     const [email, setemail] = useState(1);
@@ -19,9 +18,12 @@ const Login = ({usertype}) => {
                 if (data[i].password === password) {
                     if (data[i].isAdmin) {
                         navigate('/admin-form');
-                        console.log("We are in if of admin")
                         var flag = "true";
 
+                    }
+                    else if (data[i].isAirline) {
+                        navigate('/airline-form');
+                        var flag = "true";
                     }
                     else {
                         navigate('/tuiter/home', {state: data[i]});

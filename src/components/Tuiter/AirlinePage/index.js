@@ -1,17 +1,44 @@
 import React, {useEffect, useState} from "react";
 import {Link, useNavigate} from "react-router-dom";
-import {createdeal, createuser} from "../../actions/actions";
+import {createdeal, createuser,createairline} from "../../actions/actions";
 import {useDispatch, useSelector} from "react-redux";
 
 const AirlinePage = () => {
-    const [newUser, setnewUser] = useState({user : 'New User'});
-    const tuits = useSelector(state => state.tuits);
+    const [newAirline, setnewAirline] = useState({airline : 'New Airline'});
     const dispatch = useDispatch();
-    const [discount, setdiscount] = useState(1);
-    const [airlines, setairline] = useState(1);
-    const [creditCard, setCreditCard] = useState(1);
+    const [airlineName, setAirlineName] = useState(1);
+    const [originName, setOrigin] = useState(1);
+    const [originCode, setOriginCode] = useState(1);
+    const [destinationName, setDestination] = useState(1);
+    const [destinationCode, setDestinationCode] = useState(1);
+    const [flightNumber, setFlightNumber] = useState(1);
+    const [price, setPrice] = useState(1);
+    const [arrival, setArrival] = useState(1);
+    const [departure, setDeparture] = useState(1);
+    const [durationInMinutes,setdurationInMinutes] = useState(1);
+    const [stopCount,setStopCount] = useState(1);
+
     function submitted () {
-        createdeal(dispatch,{discount,airlines,creditCard});
+        let holder = {"legs" : {
+            "origin" : {
+                originName,originCode
+            },
+                "destination" : {
+                destinationName,destinationCode
+                },
+                durationInMinutes,
+                stopCount,
+                departure,
+                arrival,
+                "carriers" : {
+                "marketing" : {
+                    airlineName
+                }
+                },
+                price,
+                flightNumber
+            }}
+        createairline(dispatch,holder);
     }
 
     return(
@@ -21,22 +48,70 @@ const AirlinePage = () => {
                 <h4>Please Enter the details of the flight to want to add</h4>
                 <form>
                     <div className="form-group">
-                        <label>Discount in Percentage </label>
-                        <input type="number" className="form-control" placeholder="discount in %" onChange={event =>
-                            setdiscount(event.target.value)}/>
+                        <label>Enter Flight Number</label>
+                        <input type="number" className="form-control" placeholder="Flight Number" onChange={event =>
+                            setFlightNumber(event.target.value)}/>
+                    </div>
+                    <div className="form-group">
+                        <label>Enter name of the airline</label>
+                        <input type="text" className="form-control" placeholder="Name of Airline" onChange={event =>
+                            setAirlineName(event.target.value)}/>
                     </div>
 
                     <div className="form-group">
-                        <label>Enter the Name of Airline on which you want to give discount</label>
-                        <input type="text" className="form-control" placeholder="Airline" onChange={event =>
-                            setairline(event.target.value)}/>
+                        <label>Origin</label>
+                        <input type="text" className="form-control" placeholder="Origin" onChange={event =>
+                            setOrigin(event.target.value)}/>
                     </div>
 
                     <div className="form-group">
-                        <label>Enter the card on which you want discount</label>
-                        <input type="text" className="form-control" placeholder="credit card" onChange={event =>
-                            setCreditCard(event.target.value)} />
+                        <label>Origin Airport Code</label>
+                        <input type="text" className="form-control" placeholder="Origin Airport Code" onChange={event =>
+                            setOriginCode(event.target.value)}/>
                     </div>
+
+                    <div className="form-group">
+                        <label>Destination</label>
+                        <input type="text" className="form-control" placeholder="Destination" onChange={event =>
+                            setDestination(event.target.value)}/>
+                    </div>
+
+                    <div className="form-group">
+                        <label>Destination Airport Code</label>
+                        <input type="text" className="form-control" placeholder="Destination Airport Code" onChange={event =>
+                            setDestinationCode(event.target.value)}/>
+                    </div>
+
+                    <div className="form-group">
+                        <label>Price</label>
+                        <input type="number" className="form-control" placeholder="Price" onChange={event =>
+                            setPrice(event.target.value)}/>
+                    </div>
+
+                    <div className="form-group">
+                        <label>Arrival</label>
+                        <input type="text" className="form-control" placeholder="Arrival" onChange={event =>
+                            setArrival(event.target.value)}/>
+                    </div>
+
+                    <div className="form-group">
+                        <label>Departure</label>
+                        <input type="text" className="form-control" placeholder="Departure" onChange={event =>
+                            setDeparture(event.target.value)}/>
+                    </div>
+
+                    <div className="form-group">
+                        <label>Duration in mins</label>
+                        <input type="text" className="form-control" placeholder="Duration" onChange={event =>
+                            setdurationInMinutes(event.target.value)}/>
+                    </div>
+
+                    <div className="form-group">
+                        <label>Stop Count</label>
+                        <input type="number" className="form-control" placeholder="Stop Count" onChange={event =>
+                            setStopCount(event.target.value)}/>
+                    </div>
+
                     <br></br>
                     <button type="submit" className="btn btn-primary btn-block" onClick={submitted}>Sign Up</button>
                 </form>

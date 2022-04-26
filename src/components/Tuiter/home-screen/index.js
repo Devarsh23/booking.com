@@ -1,28 +1,27 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import Navigationsidebar from ".././NavigationSidebar";
 import Deals from "../Deals";
 import TuitList from "../tuit-list";
 import {Link} from "react-router-dom";
 import {useLocation} from "react-router-dom";
 import HeaderComponent from "../HeaderComponent";
-import {Provider} from "react-redux";
+import {Provider, useDispatch, useSelector} from "react-redux";
 import {combineReducers, createStore} from "redux";
 import loginReducers from "../reducers/login-reducers";
 import whoReducer from "../reducers/who-reducer";
 import profileReducer from "../reducers/profile-reducer";
 import dealsReducers from "../reducers/deals-reducer";
+import {findlogin, findData} from "../../actions/actions";
 const reducer = combineReducers({
     tuits: loginReducers, who: whoReducer, profileReducer: profileReducer, deals: dealsReducers, login: loginReducers
 });
 const store = createStore(reducer);
 
-
-
 const HomeScreen = (callbackFn) => {
     const [passengers, setPassengers] = useState(1);
     const [origin, setOrigin] = useState("BOS");
     const [destination, setDestination] = useState("EWR");
-    const [date, setDate] = useState("2022-05-20");
+    const [date, setDate] = useState("2022-04-25");
     const location = useLocation();
     if (location.state === null) {
         return(

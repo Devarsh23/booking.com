@@ -6,9 +6,10 @@ import profileReducer from "./reducers/profile-reducer";
 import {combineReducers, createStore} from "redux";
 import {Provider} from "react-redux";
 import homeScreen from "./home-screen";
-
+import apiReducers from "./reducers/apiResults-reducer";
+import initialReducer from "./reducers/initial-reducer";
 const reducer = combineReducers({
-    tuits: tuitsReducer, who: whoReducer, profileReducer: profileReducer
+    tuits: tuitsReducer, who: whoReducer, profileReducer: profileReducer, results: apiReducers, singleValue : initialReducer
 });
 const store = createStore(reducer);
 

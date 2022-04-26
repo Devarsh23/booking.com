@@ -1,22 +1,28 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
+import {useDispatch, useSelector} from "react-redux";
+import {findData, findSingleValue, updateData} from "../../actions/actions";
 
 const Navigationsidebar = ({setPassengers, setOrigin, setDestination, setDate}) => {
-    const [passengers, setpassengers] = useState('')
-    const [origin, setorigin] = useState('')
-    const [destination, setdestination] = useState('')
-    const [date, setdate] = useState('')
-    function setValues(){
-        setPassengers(passengers);
-        setOrigin(origin);
-        setDestination(destination);
-        setDate(date);
+    const [passengers, setpassengers] = useState([])
+    const [origin, setorigin] = useState([])
+    const [destination, setdestination] = useState([])
+    const [date, setdate] = useState([])
+    var filterData = useSelector(state => state.singleValue[0]);
+    const _id = filterData?._id;
+    var singleValue = {_id, passengers,origin,destination,date}
+    useEffect(() => findSingleValue(dispatch),[]);
+    const useSetValues = () => {
+        updateData(dispatch,{...singleValue})
     }
+    const dispatch = useDispatch();
+
     return (
         <>
             <div className="list-group">
                 <div>
                     <h5>Filters</h5>
                 </div>
+                <form>
                 <div>
                     <label htmlFor="numberOfPassengers">Passengers</label>
                     <input type="number" id="numberOfPassengers" placeholder="No of travelers" onChange={event =>
@@ -49,8 +55,9 @@ const Navigationsidebar = ({setPassengers, setOrigin, setDestination, setDate}) 
                     </input>
                 </div>
                 <br></br>
-                <button className="btn btn-primary rounded-pill" onClick={setValues}>Submit</button>
-            </div>
+                <button className="btn btn-primary rounded-pill" onClick={useSetValues}>Submit</button>
+                </form>
+           </div>
         </>
     );
 }

@@ -22,12 +22,11 @@ import loginReducers from "./components/Tuiter/reducers/login-reducers";
 import dealsReducers from "./components/Tuiter/reducers/deals-reducer";
 import AdminPage from "./components/Tuiter/AdminPage";
 import airlineReducers from "./components/Tuiter/reducers/airline-reducers";
-
+import AirlinePage from "./components/Tuiter/AirlinePage";
 const reducer = combineReducers({
     tuits: loginReducers, who: whoReducer, profileReducer: profileReducer, deals: dealsReducers, login: loginReducers, airlines: airlineReducers
 });
 const store = createStore(reducer);
-
 function App() {
     const [flightDetails, setFlightDetails] = useState(1);
     const callbackFn = (data)=>{
@@ -76,6 +75,9 @@ function App() {
                         </Route>
                         <Route path="/admin-form"
                                element={<AdminPage/>}>
+                        </Route>
+                        <Route path="/airline-form"
+                               element={<AirlinePage/>}>
                         </Route>
                         <Route path="/profile"
                         element={<Profile/>}></Route>

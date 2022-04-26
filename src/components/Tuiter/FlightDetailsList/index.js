@@ -1,29 +1,19 @@
 import React, {useEffect} from "react";
-import {useDispatch, useSelector} from "react-redux";
-import {findDeals, createuser, findlogin,findAirlines} from "../../actions/actions";
-// import * as service from "../../services/services"
 import {Link, useLocation, useNavigate} from "react-router-dom";
-import {Location} from "react-router-dom";
 import HeaderComponent from "../HeaderComponent";
-import FlightDetailsList from "../FlightDetailsList";
-const FlightDetails = ({flightDetails}) => {
-    const data = useSelector(state => state.airlines);
-    console.log(data)
-    const dispatch = useDispatch();
-    useEffect(() => findAirlines(dispatch),[]);
-    const location = useLocation();
+
+const FlightDetailsList = ({flightDetails}) => {
     return(
         <>
-            <HeaderComponent location={location}/>
             <div className="container">
                 <div className="row mt-2">
                     <div className="col-2 ps-3 me-3" style={{width:'100%'}}>
-                        <label className="wd-fg-color-white h6 fw-bold">{flightDetails.legs[0].carriers.marketing[0].name}&nbsp;</label>
-                        <label className="wd-topic wd-fg-color-light-gray">&nbsp; {flightDetails.legs[0].segments[0].flightNumber}</label>
+                        <label className="wd-fg-color-white h6 fw-bold">{flightDetails[0]?.legs?.carriers?.marketing?.name}&nbsp;</label>
+                        <label className="wd-topic wd-fg-color-light-gray">&nbsp; 87542</label>
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-4"><b>{flightDetails.legs[0].origin.name}({flightDetails.legs[0].origin.displayCode})</b></div>
+                    <div className="col-4"><b>{flightDetails[0]?.legs?.origin?.name}({flightDetails[0]?.legs?.origin?.displayCode})</b></div>
                     <div className="col-2">
                     <span className="plane">
                         <svg
@@ -54,24 +44,22 @@ const FlightDetails = ({flightDetails}) => {
                         </svg>
                     </span>
                     </div>
-                    <div className="col-3"> <b>{flightDetails.legs[0].destination.name}({flightDetails.legs[0].destination.displayCode})</b></div>
-                    <div className="col-3"><b>${flightDetails.pricing_options[0].price.amount}</b></div>
+                    <div className="col-3"> <b>{flightDetails[0]?.legs?.destination?.name}({flightDetails[0]?.legs?.destination?.displayCode})</b></div>
+                    <div className="col-3"><b>${flightDetails[0]?.legs?.price}</b></div>
                 </div>
                 <div>
-                    <div>Arrival - {flightDetails.legs[0].arrival}</div>
-                    <div>Departure - {flightDetails.legs[0].departure}</div>
-                    <div>Duration of flight - {flightDetails.legs[0].durationInMinutes} Minutes</div>
-                    <div>Number of stops - {flightDetails.legs[0].stopCount} </div>
+                    <div>Arrival - {flightDetails[0]?.legs?.arrival}</div>
+                    <div>Departure - {flightDetails[0]?.legs?.departure}</div>
+                    <div>Duration of flight - {flightDetails[0]?.legs?.durationInMinutes} Minutes</div>
+                    <div>Number of stops - {flightDetails[0]?.legs?.stopCount} </div>
                 </div>
                 <div className= "border-top border-secondary">
                     <Link to="/login">
                         <button className="primary rounded-pill mt-2">Book</button>
                     </Link>
                 </div>
-                <FlightDetailsList flightDetails={data}/>
             </div>
         </>
     );
 }
-
-export default FlightDetails;
+export default FlightDetailsList;
