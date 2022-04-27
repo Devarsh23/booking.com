@@ -70,6 +70,7 @@ export const flightSearchResults = async (details) => {
         //     }
         // };
         // const response = await axios.request(options);
+        // console.log("API data --> ",response.data.itineraries.results )
         // return response.data.itineraries.results;
         return {}
     }

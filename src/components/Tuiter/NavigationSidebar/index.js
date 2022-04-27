@@ -25,7 +25,7 @@ const Navigationsidebar = ({setPassengers, setOrigin, setDestination, setDate}) 
                 <div>
                     <h5>Filters</h5>
                 </div>
-                <form>
+                {/*<form>*/}
                 <div>
                     <label htmlFor="numberOfPassengers">Passengers</label>
                     <input type="number" id="numberOfPassengers" placeholder="No of travelers" onChange={event =>
@@ -59,7 +59,7 @@ const Navigationsidebar = ({setPassengers, setOrigin, setDestination, setDate}) 
                 </div>
                 <br></br>
                 <button className="btn btn-primary rounded-pill" onClick={useSetValues}>Submit</button>
-                </form>
+                {/*</form>*/}
            </div>
         </>
     );
