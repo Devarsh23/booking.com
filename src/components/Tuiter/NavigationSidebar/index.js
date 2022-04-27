@@ -7,7 +7,10 @@ const Navigationsidebar = ({setPassengers, setOrigin, setDestination, setDate}) 
     const [origin, setorigin] = useState([])
     const [destination, setdestination] = useState([])
     const [date, setdate] = useState([])
-    var filterData = useSelector(state => state.singleValue[0]);
+    var filterData = useSelector(state => state?.singleValue[0]);
+    // const check = useSelector(state => state);
+    // console.log("check -->",check);
+    // var filterData;
     const _id = filterData?._id;
     var singleValue = {_id, passengers,origin,destination,date}
     useEffect(() => findSingleValue(dispatch),[]);

@@ -1,19 +1,32 @@
 import {Link} from "react-router-dom";
-import React from "react";
-import deals from "../Deals/deals.json";
-import DealItems from "../Deals/dealItems";
-const Mybookings = () => {
+import React, {useEffect} from "react";
+import BookingItems from "./BookingItems";
+import {findBookings} from "../../actions/actions";
+import {useDispatch, useSelector} from "react-redux";
+const Mybookings = ({location}) => {
+    const currentUser = location.state.firstname;
+    const dispatch = useDispatch();
+    const bookings = useSelector(state => state.bookings);
+    useEffect(() => findBookings(dispatch),[])
+    let bookingDataOfUser = [];
+    for (let i = 0; i < bookings.length; i++) {
+
+        if (bookings[i].user === currentUser) {
+            bookingDataOfUser.push(bookings[i]);
+        }
+
+    }
+
     return (
         <>
-            <ul className="list-group">
-                <li className="list-group-item">
+            <ul className="list-group mt-5">
                     <h5>My Bookings</h5>
-                </li>
                 {
-                    deals.map(deal => {
-                        return(<DealItems key = {deal.id} deal={deal}/>);
+                    bookingDataOfUser.map(booking => {
+                        return(<BookingItems key = {booking._id} booking={booking}/>);
                     })
                 }
+
             </ul>
         </>
     )

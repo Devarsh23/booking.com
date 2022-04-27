@@ -1,20 +1,20 @@
-import React, {useEffect} from "react";
-import {Link, useLocation, useNavigate} from "react-router-dom";
-import HeaderComponent from "../HeaderComponent";
+import React from "react";
+import {Link} from "react-router-dom";
 
-const FlightDetailsList = ({flightDetails}) => {
-    console.log("flightDetails list --> ", flightDetails);
+const BookingItems = ({booking}) => {
     return(
         <>
             <div className="container">
                 <div className="row mt-2">
-                    <div className="col-2 ps-3 me-3" style={{width:'100%'}}>
-                        <label className="wd-fg-color-white h6 fw-bold">{flightDetails?.legs?.carriers?.marketing?.airlineName}&nbsp;</label>
-                        <label className="wd-topic wd-fg-color-light-gray">&nbsp; 87542</label>
+                    <div className="col-2 ps-3 me-3" style={{width: '100%'}}>
+                        <label
+                            className="wd-fg-color-white h6 fw-bold">{booking.booking.airlineName}&nbsp;</label>
+                        <label
+                            className="wd-topic wd-fg-color-light-gray">&nbsp; {booking.booking.flightNumber}</label>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-4"><b>{flightDetails?.legs?.origin?.originName}({flightDetails?.legs?.origin?.originCode})</b></div>
+                <div className="row border-bottom border-secondary">
+                    <div className="col-2"><b>{booking.booking.originCode}</b></div>
                     <div className="col-2">
                     <span className="plane">
                         <svg
@@ -45,22 +45,12 @@ const FlightDetailsList = ({flightDetails}) => {
                         </svg>
                     </span>
                     </div>
-                    <div className="col-3"> <b>{flightDetails?.legs?.destination?.destinationName}({flightDetails?.legs?.destination?.destinationCode})</b></div>
-                    <div className="col-3"><b>${flightDetails?.legs?.price}</b></div>
-                </div>
-                <div>
-                    <div>Arrival - {flightDetails?.legs?.arrival}</div>
-                    <div>Departure - {flightDetails?.legs?.departure}</div>
-                    <div>Duration of flight - {flightDetails?.legs?.durationInMinutes} Minutes</div>
-                    <div>Number of stops - {flightDetails?.legs?.stopCount} </div>
-                </div>
-                <div className= "border-top border-secondary">
-                    <Link to="/login">
-                        <button className="primary rounded-pill mt-2">Book</button>
-                    </Link>
+                    <div className="col-3"><b>{booking.booking.destinationCode}</b></div>
+                    <div className="col-3"><b>${booking.booking.price}</b></div>
                 </div>
             </div>
         </>
     );
 }
-export default FlightDetailsList;
+
+export default BookingItems;

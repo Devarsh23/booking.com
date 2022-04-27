@@ -17,12 +17,12 @@ const Login = ({usertype}) => {
             if (data[i].email === email) {
                 if (data[i].password === password) {
                     if (data[i].isAdmin) {
-                        navigate('/admin-form');
+                        navigate('/admin-form', {state: data[i]});
                         var flag = "true";
 
                     }
                     else if (data[i].isAirline) {
-                        navigate('/airline-form');
+                        navigate('/airline-form', {state: data[i]});
                         var flag = "true";
                     }
                     else {

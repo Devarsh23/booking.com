@@ -4,6 +4,7 @@ const LOGINAPI = 'http://localhost:4000/api/tuits';
 const DEALSAPI = 'http://localhost:4000/api/deals';
 const AIRLINESAPI = 'http://localhost:4000/api/airlines';
 const INITIALAPI = 'http://localhost:4000/api/initial';
+const BOOKINGSAPI = 'http://localhost:4000/api/bookings';
 
 export const findDeals = async () => {
     const response = await axios.get(DEALSAPI);
@@ -87,3 +88,15 @@ export const findInitial = async () => {
     return datax;
 }
 
+export const findBookings = async () => {
+    const response = await axios.get(BOOKINGSAPI);
+    const datax = response.data;
+    return datax;
+}
+
+export const createBookings = async (bookings) => {
+    console.log("to be on safer side", bookings);
+    const response = await axios.post(BOOKINGSAPI, bookings)
+    return response.data;
+
+}

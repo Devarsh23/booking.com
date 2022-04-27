@@ -26,6 +26,9 @@ const SignUp = ({userStatus}) => {
     const [lastname, setlastname] = useState(1);
     const [email, setemail] = useState(1);
     const [password, setpassword] = useState(1);
+    const [dateOfBirth, setDateOfBirth] = useState(1);
+    const [location, setLocation] = useState(1);
+    let dateJoined = new Date().toISOString().slice(0,10);
     function submitted() {
         console.log("Hello");
         //tuitsModel.create({"firstname" : firstname});
@@ -54,7 +57,7 @@ const SignUp = ({userStatus}) => {
             isUser = "true";
             isAdmin = "false";
         }
-        createuser(dispatch,{firstname,lastname,email,password,isUser,isAdmin,isAirline});
+        createuser(dispatch,{firstname,lastname,email,password,isUser,isAdmin,isAirline,dateOfBirth,location,dateJoined});
         navigate('/login');
 
     }
@@ -85,6 +88,16 @@ const SignUp = ({userStatus}) => {
                     <label>Password</label>
                     <input type="password" className="form-control" placeholder="Enter password" onChange={event =>
                         setpassword(event.target.value)}/>
+                </div>
+                <div className="form-group">
+                    <label>Date Of Birth</label>
+                    <input type="date" className="form-control" placeholder="Enter DOB" onChange={event =>
+                        setDateOfBirth(event.target.value)}/>
+                </div>
+                <div className="form-group">
+                    <label>Location</label>
+                    <input type="text" className="form-control" placeholder="Enter Location" onChange={event =>
+                        setLocation(event.target.value)}/>
                 </div>
                 <br></br>
                 <button type="submit" className="btn btn-primary btn-block" onClick={submitted}>Sign Up</button>

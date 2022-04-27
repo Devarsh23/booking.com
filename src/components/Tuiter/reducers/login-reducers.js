@@ -6,8 +6,6 @@ const loginReducers = (state = [], action) => {
             return action.login;
         case CREATE_USER:
             return [...state, action.newUser];
-        case FIND_DEALS:
-            return action.deals;
         default:
             return state;
     }

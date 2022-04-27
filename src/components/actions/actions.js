@@ -9,7 +9,8 @@ export const CREATE_AIRLINES = 'CREATE_AIRLINES';
 export const API_RESULTS = 'API_RESULTS';
 export const INITIAL_VALUES = 'INITIAL_VALUES';
 export const SINGLE_INITIAL_VALUES = 'SINGLE_INITIAL_VALUES';
-
+export const FIND_BOOKINGS = 'FIND_BOOKINGS';
+export const CREATE_BOOKINGS = 'CREATE_BOOKINGS';
 
 export const findlogin = async(dispatch) => {
     const login = await service.findLogin();
@@ -54,4 +55,14 @@ export const updateData = async(dispatch, singleValue) => {
 export const findSingleValue = async(dispatch) => {
     const singleValue = await service.findInitial();
     dispatch({type: SINGLE_INITIAL_VALUES, singleValue})
+}
+
+export const findBookings = async(dispatch) => {
+    const bookings = await service.findBookings();
+    dispatch({type: FIND_BOOKINGS, bookings})
+}
+
+export const createNewBookings = async(dispatch, bookings) => {
+    const newBooking = await service.createBookings(bookings);
+    dispatch({type: CREATE_BOOKINGS, newBooking})
 }

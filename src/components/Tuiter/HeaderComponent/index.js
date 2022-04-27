@@ -1,7 +1,8 @@
 import {Link} from "react-router-dom";
 import React from "react";
+
 const HeaderComponent = ({location}) => {
-    if(location.state === null) {
+    if(location?.state === null) {
         return (
             <>
                 <div className="row mt-3">
@@ -11,7 +12,6 @@ const HeaderComponent = ({location}) => {
                     <div className="col">
                         {location?.state?.firstname} {location?.state?.lastname}
                         <Link to="/login">
-
                             <i className="fas fa-user float-end"></i>
                         </Link>
                     </div>
@@ -28,8 +28,7 @@ const HeaderComponent = ({location}) => {
                     </div>
                     <div className="col">
                         {location?.state?.firstname} {location?.state?.lastname}
-                        <Link to="/profile">
-
+                        <Link to="/profile"  state={location.state}>
                             <i className="fas fa-user float-end"></i>
                         </Link>
                     </div>

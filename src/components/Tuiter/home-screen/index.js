@@ -5,17 +5,17 @@ import TuitList from "../tuit-list";
 import {Link} from "react-router-dom";
 import {useLocation} from "react-router-dom";
 import HeaderComponent from "../HeaderComponent";
-import {Provider, useDispatch, useSelector} from "react-redux";
+//import {Provider, useDispatch, useSelector} from "react-redux";
 import {combineReducers, createStore} from "redux";
 import loginReducers from "../reducers/login-reducers";
 import whoReducer from "../reducers/who-reducer";
-import profileReducer from "../reducers/profile-reducer";
 import dealsReducers from "../reducers/deals-reducer";
 import {findlogin, findData} from "../../actions/actions";
-const reducer = combineReducers({
-    tuits: loginReducers, who: whoReducer, profileReducer: profileReducer, deals: dealsReducers, login: loginReducers
-});
-const store = createStore(reducer);
+import Mybookings from "../Mybookings";
+// const reducer = combineReducers({
+//     tuits: loginReducers, who: whoReducer, deals: dealsReducers, login: loginReducers
+// });
+// const store = createStore(reducer);
 
 const HomeScreen = (callbackFn) => {
     const [passengers, setPassengers] = useState(1);
@@ -41,9 +41,7 @@ const HomeScreen = (callbackFn) => {
                             </div>
                         </div>
                         <div className="col-4">
-                            <Provider store={store}>
                             <Deals/>
-                            </Provider>
                         </div>
                     </div>
                 </div>
@@ -71,9 +69,8 @@ const HomeScreen = (callbackFn) => {
                             </div>
                         </div>
                         <div className="col-4">
-                            <Provider store={store}>
                                 <Deals/>
-                            </Provider>
+                            <Mybookings location = {location}/>
                         </div>
                     </div>
                 </div>

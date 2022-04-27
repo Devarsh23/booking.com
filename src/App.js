@@ -17,14 +17,17 @@ import {Provider} from "react-redux";
 import {combineReducers, createStore} from "redux";
 import tuitsReducer from "./components/Tuiter/reducers/tuits-reducer";
 import whoReducer from "./components/Tuiter/reducers/who-reducer";
-import profileReducer from "./components/Tuiter/reducers/profile-reducer";
+
 import loginReducers from "./components/Tuiter/reducers/login-reducers";
 import dealsReducers from "./components/Tuiter/reducers/deals-reducer";
 import AdminPage from "./components/Tuiter/AdminPage";
 import airlineReducers from "./components/Tuiter/reducers/airline-reducers";
 import AirlinePage from "./components/Tuiter/AirlinePage";
+import initialReducer from "./components/Tuiter/reducers/initial-reducer";
+import bookingReducer from "./components/Tuiter/reducers/booking-reducer";
+
 const reducer = combineReducers({
-    tuits: loginReducers, who: whoReducer, profileReducer: profileReducer, deals: dealsReducers, login: loginReducers, airlines: airlineReducers
+    tuits: loginReducers, who: whoReducer, deals: dealsReducers, login: loginReducers, airlines: airlineReducers, singleValues: initialReducer, bookings: bookingReducer
 });
 const store = createStore(reducer);
 function App() {
@@ -80,7 +83,8 @@ function App() {
                                element={<AirlinePage/>}>
                         </Route>
                         <Route path="/profile"
-                        element={<Profile/>}></Route>
+                        element={<Profile/>}>
+                        </Route>
                     </Route>
                 </Routes>
             </div>
