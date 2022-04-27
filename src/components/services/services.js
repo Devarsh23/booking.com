@@ -82,6 +82,13 @@ export const updateInitial = async (singleValue) => {
     return response.data;
 }
 
+export const updateUser = async (profile) => {
+    //console.log("AAi gayo", singleValue);
+    const response = await axios.put(`${LOGINAPI}/${profile._id}`,profile);
+    return response.data;
+}
+
+
 export const findInitial = async () => {
     const response = await axios.get(INITIALAPI);
     const datax = response.data;

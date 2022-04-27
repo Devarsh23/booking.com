@@ -1,7 +1,9 @@
 import {Link} from "react-router-dom";
 import React from "react";
+import {useDispatch, useSelector} from "react-redux";
 
 const HeaderComponent = ({location}) => {
+
     if(location?.state === null) {
         return (
             <>

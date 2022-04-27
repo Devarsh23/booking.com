@@ -9,9 +9,10 @@ import apiReducers from "./reducers/apiResults-reducer";
 import initialReducer from "./reducers/initial-reducer";
 import BookingReducer from "./reducers/booking-reducer";
 import dealsReducers from "./reducers/deals-reducer";
+import loginReducers from "./reducers/login-reducers";
 
 const reducer = combineReducers({
-    tuits: tuitsReducer, who: whoReducer, results: apiReducers, singleValue : initialReducer, bookings:BookingReducer, deals: dealsReducers
+    tuits: tuitsReducer, who: whoReducer, results: apiReducers, singleValue : initialReducer, bookings:BookingReducer, deals: dealsReducers, login:loginReducers
 });
 const store = createStore(reducer);
 

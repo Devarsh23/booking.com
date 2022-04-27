@@ -11,6 +11,8 @@ export const INITIAL_VALUES = 'INITIAL_VALUES';
 export const SINGLE_INITIAL_VALUES = 'SINGLE_INITIAL_VALUES';
 export const FIND_BOOKINGS = 'FIND_BOOKINGS';
 export const CREATE_BOOKINGS = 'CREATE_BOOKINGS';
+export const UPDATE_USERS = 'UPDATE_USERS';
+
 
 export const findlogin = async(dispatch) => {
     const login = await service.findLogin();
@@ -51,6 +53,13 @@ export const updateData = async(dispatch, singleValue) => {
     const response = await service.updateInitial(singleValue);
     dispatch({type: INITIAL_VALUES, singleValue})
 }
+
+
+export const updateUsers = async(dispatch, profile) => {
+    const response = await service.updateUser(profile);
+    dispatch({type: UPDATE_USERS, profile})
+}
+
 
 export const findSingleValue = async(dispatch) => {
     const singleValue = await service.findInitial();
