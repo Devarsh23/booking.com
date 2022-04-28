@@ -18,7 +18,7 @@ const TuitList = ({passengers, origin, destination, date, callbackFn, userdata})
     //const test = useSelector(state => state.results);
     if (userdata === null) {
         return (
-            <ul className="ttr-tuits list-group">
+            <ul className="ttr-tuits list-group wd-whiteBG wd-blueFont">
                 {
                     test.map && test.map(param => <TuitListItem key={param.id} param={param} callbackFn={callbackFn}/>)
                 }
@@ -26,7 +26,7 @@ const TuitList = ({passengers, origin, destination, date, callbackFn, userdata})
         );
     } else {
         return (
-            <ul className="ttr-tuits list-group">
+            <ul className="ttr-tuits list-group wd-whiteBG wd-blueFont">
                 {
                     test.map && test.map(param => <TuitListItem key={param.id} param={param} callbackFn={callbackFn}
                                                                 userdata={userdata}/>)

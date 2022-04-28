@@ -59,9 +59,9 @@ const AirlinePage = () => {
         return (
             <>
                 <HeaderComponent location={location}/>
-                <div className="col-4">
-                    <h3>WELCOME TO AIRLINE PAGE</h3>
-                    <h4>Please Enter the details of the flight to want to add</h4>
+                <div className=" container col-10 col-sm-8 col-md-8 col-lg-8 col-xl-7 col-xxl-6 wd-blueBG p-5">
+                    <h3 className="fw-bold">WELCOME TO AIRLINE PAGE</h3>
+                    <h5>Please Enter the details of the flight to want to add</h5>
                     <form>
                         <div className="form-group">
                             <label>Enter Flight Number</label>
@@ -131,7 +131,7 @@ const AirlinePage = () => {
                         </div>
 
                         <br></br>
-                        <button type="submit" className="btn btn-primary btn-block" onClick={submitted}>Sign Up</button>
+                        <button type="submit" className="btn btn-primary btn-block" onClick={submitted}>Post</button>
                     </form>
                 </div>
             </>

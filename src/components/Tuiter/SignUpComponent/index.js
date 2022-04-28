@@ -63,39 +63,40 @@ const SignUp = ({userStatus}) => {
     }
 
     return (
-        <div className="col-4">
-                <h3>Sign Up</h3>
+        <div className="container mt-5 p-5 col-12 col-sm-10 col-md-8 col-lg-6 col-xl-4 col-xxl-4 wd-blueBG">
+
+        <h3 className="wd-whiteFont">Sign Up</h3>
             <form>
                 <div className="form-group">
-                    <label>First name</label>
-                    <input type="text" className="form-control" placeholder="First name" onChange={event =>
+                    <label className="wd-fontBold">First name</label>
+                    <input type="text" className="form-control border" placeholder="First name" onChange={event =>
                         setfirstname(event.target.value)}/>
                 </div>
 
                 <div className="form-group">
-                    <label>Last name</label>
-                    <input type="text" className="form-control" placeholder="Last name" onChange={event =>
+                    <label className="wd-fontBold">Last name</label>
+                    <input type="text" className="form-control border" placeholder="Last name" onChange={event =>
                         setlastname(event.target.value)}/>
                 </div>
 
                 <div className="form-group">
-                    <label>Email address</label>
-                    <input type="email" className="form-control" placeholder="Enter email" onChange={event =>
+                    <label className="wd-fontBold">Email address</label>
+                    <input type="email" className="form-control border" placeholder="Enter email" onChange={event =>
                         setemail(event.target.value)} />
                 </div>
 
                 <div className="form-group">
-                    <label>Password</label>
+                    <label className="wd-fontBold" >Password</label>
                     <input type="password" className="form-control" placeholder="Enter password" onChange={event =>
                         setpassword(event.target.value)}/>
                 </div>
                 <div className="form-group">
-                    <label>Date Of Birth</label>
+                    <label className="wd-fontBold" >Date Of Birth</label>
                     <input type="date" className="form-control" placeholder="Enter DOB" onChange={event =>
                         setDateOfBirth(event.target.value)}/>
                 </div>
                 <div className="form-group">
-                    <label>Location</label>
+                    <label className="wd-fontBold" >Location</label>
                     <input type="text" className="form-control" placeholder="Enter Location" onChange={event =>
                         setLocation(event.target.value)}/>
                 </div>

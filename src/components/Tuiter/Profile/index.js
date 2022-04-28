@@ -28,31 +28,46 @@ const Profile = () => {
         return (
             <>
                 <div>
-                    <div className="row mt-2">
-                        <div className="col-8" style={{"position": "relative"}}>
+                    <div className="row mt-2 ">
+                        <div className="col-8 wd-blueBG" style={{"position": "relative"}}>
 
                             <div className="mt-2 row">
-                                <label className="wd-color-white"><b>{userDataToSend?.firstname}</b></label>
-                                <label className="wd-color-white"><b>{userDataToSend?.lastname}</b></label>
-                                <label className="wd-color-white"><b>{userDataToSend?.email}</b></label>
-                                <br></br>
-                                <label className="wd-font">1000 Bookings</label>
-                            </div>
-                            <div className="wd-container">
-                                <img src={profile?.bannerPicture} className="wd-main"></img>
-                                <img src={profile?.profilePicture}
-                                     className="rounded-pill wd-border-black wd-overlay"></img>
+                                <label className="wd-whiteFont"><b>{userDataToSend?.firstname}</b></label>
+                                <label className="wd-whiteFont"><b>{userDataToSend?.lastname}</b></label>
+                                <label className="wd-whiteFont"><b>{userDataToSend?.email}</b></label>
+                                <br/>
+                                <label className="wd-font wd-whiteFont">500 Bookings</label>
 
+
+
+
+
+
+
+                                </div>   <br/><br/><br/> <br/>
+
+                            <div className="wd-container ">
+                                <img
+                                    src="https://media.istockphoto.com/vectors/user-icon-human-person-symbol-social-profile-icon-avatar-login-sign-vector-id1316420668?k=20&m=1316420668&s=612x612&w=0&h=Z2cc0HZXkovLCVmoJ8LCIG5eWMetgOX9oLe-lF0OWJM="
+                                    width='150px'
+                                    height='150px'
+                                    className='rounded-circle border border-dark'
+                                    style={{
+                                        position: "relative",
+                                        marginTop: "-75px",
+                                        marginLeft: "10px",
+                                    }}
+                                    alt=""
+                                />
                             </div>
-                            <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-                            <div className="ms-3">
-                                <label
-                                    className="wd-username-font wd-color-white"><b>{userDataToSend?.firstname}</b></label>
-                                <br></br>
-                                <label>@{userDataToSend?.firstname}</label>
-                                <i className="fas fa-map-marker-alt me-2"></i><label>{userDataToSend?.location}</label>
-                                <i className="fas fa-golf-ball ms-2 me-2"></i><label>Born {userDataToSend?.dateOfBirth}</label>
-                                <i className="fas fa-calendar-alt ms-2 me-2"></i><label>Joined {userDataToSend?.dateJoined}</label>
+
+                            <br></br><br></br><br></br><br></br>
+                            <div className="ms-3 wd-whiteFont">
+
+                                <label>@{userDataToSend?.firstname}</label> &nbsp;&nbsp;
+                                <i className="fas fa-map-marker-alt me-2"></i><label>{userDataToSend?.location}</label>&nbsp; &nbsp;
+                                <i className="fas fa-golf-ball ms-2 me-2"></i><label>Born {userDataToSend?.dateOfBirth}</label> &nbsp;&nbsp;
+                                <i className="fas fa-calendar-alt ms-2 me-2"></i><label>Joined {userDataToSend?.dateJoined}</label> &nbsp;&nbsp;
                                 <br></br>
                             </div>
 
@@ -70,8 +85,8 @@ const Profile = () => {
         return (
             <>
                 <div>
-                    <div className="row mt-2">
-                        <div className="col-8" style={{"position": "relative"}}>
+                    <div className="row mt-2  ">
+                        <div className="col-8 wd-blueBG" style={{"position": "relative"}}>
                             {/*{*/}
                             {/*    profile.map(id=>*/}
                             {/*        <ProfileComponent key={id.dateOfBirth} profile={id}/>*/}
@@ -79,37 +94,47 @@ const Profile = () => {
                             {/*}*/}
 
                             <div className="mt-2 row">
-                                <label className="wd-color-white"><b>{userDataToSend?.firstname}</b></label>
-                                <label className="wd-color-white"><b>{userDataToSend?.lastname}</b></label>
-                                <label className="wd-color-white"><b>{userDataToSend?.email}</b></label>
+                                <label className="wd-whiteFont"><b>{userDataToSend?.firstname}</b></label>
+                                <label className="wd-whiteFont"><b>{userDataToSend?.lastname}</b></label>
+                                <label className="wd-whiteFont"><b>{userDataToSend?.email}</b></label>
                                 <br></br>
-                                <label className="wd-font">1000 Bookings</label>
+                                <label className="wd-font wd-whiteFont">1000 Bookings</label>
                             </div>
-                            <div className="wd-container">
-                                <img src={profile?.bannerPicture} className="wd-main"></img>
-                                <img src={profile?.profilePicture}
-                                     className="rounded-pill wd-border-black wd-overlay"></img>
-                                <button type="button" className="btn rounded-pill wd-right border-secondary mt-3 me-3"
-                                        onClick={() => navigate("/tuiter/edit-profile", {state: location.state})}>Edit
-                                    Profile
-                                </button>
+                            <br/><br/><br/> <br/>
+                            <div className="wd-container ">
+                                <img
+                                    src="https://media.istockphoto.com/vectors/user-icon-human-person-symbol-social-profile-icon-avatar-login-sign-vector-id1316420668?k=20&m=1316420668&s=612x612&w=0&h=Z2cc0HZXkovLCVmoJ8LCIG5eWMetgOX9oLe-lF0OWJM="
+                                    width='150px'
+                                    height='150px'
+                                    className='rounded-circle border border-dark'
+                                    style={{
+                                        position: "relative",
+                                        marginTop: "-75px",
+                                        marginLeft: "10px",
+                                    }}
+                                    alt=""
+                                />
+
 
                             </div>
-                            <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-                            <div className="ms-3">
-                                <label
-                                    className="wd-username-font wd-color-white"><b>{userDataToSend?.firstname}</b></label>
-                                <br></br>
-                                <label>@{userDataToSend?.firstname}</label>
-                                <i className="fas fa-map-marker-alt me-2"></i><label>{userDataToSend?.location}</label>
-                                <i className="fas fa-golf-ball ms-2 me-2"></i><label>Born {userDataToSend?.dateOfBirth}</label>
-                                <i className="fas fa-calendar-alt ms-2 me-2"></i><label>Joined {userDataToSend?.dateJoined}</label>
+                            <button type="button" className="btn-primary rounded-pill wd-right border-secondary mt-3 me-3"
+                                    onClick={() => navigate("/tuiter/edit-profile", {state: location.state})}>Edit
+                                Profile
+                            </button>
+                            <br/>
+                            <div className="ms-3 wd-whiteFont">
+                                <br/><br/> <br/>
+
+                                <label>@{userDataToSend?.firstname} </label>&nbsp;&nbsp;
+                                <i className="fas fa-map-marker-alt me-2"></i><label>{userDataToSend?.location}</label>&nbsp;&nbsp;
+                                <i className="fas fa-golf-ball ms-2 me-2"></i><label>Born {userDataToSend?.dateOfBirth}</label>&nbsp;&nbsp;
+                                <i className="fas fa-calendar-alt ms-2 me-2"></i><label>Joined {userDataToSend?.dateJoined}</label>&nbsp;&nbsp;
                                 <br></br>
                             </div>
 
 
                         </div>
-                        <div className="col-4">
+                        <div className="col-4 col-md-4 col-lg-4 col-l-4 col-xxl-4">
                             <Deals/>
                             <Mybookings location={location}/>
                         </div>

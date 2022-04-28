@@ -1,6 +1,6 @@
 .wd-fg-color-black { color: black; }
 .wd-fg-color-white { color: white; }
-.wd-fg-color-blue { color: blue; }
+.wd-fg-color-blue { color: #000080; }
 .wd-fg-color-red { color: #ff7070; }
 .wd-fg-color-green { color: green; }
 .wd-fg-color-light-gray { color: rgb(110, 118, 125); }
@@ -10,7 +10,7 @@
 .wd-bg-color-black-twitter
 { background-color: #14171A; }
 .wd-bg-color-blue
-{ background-color:blue; }
+{ background-color:#000080; }
 .wd-bg-color-black
 { background-color:black; }
 .wd-bg-color-red

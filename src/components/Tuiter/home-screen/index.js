@@ -29,19 +29,21 @@ const HomeScreen = (callbackFn) => {
                 <div>
                 <HeaderComponent location={location}/>
                 </div>
-                <div>
+                <div className=" container wd-whiteBG">
                     <div className="row mt-2">
-                        <div className="col-2">
-                            <Navigationsidebar setPassengers={setPassengers} setOrigin={setOrigin}
+                        <div className="col-2 d-none d-sm-none d-md-block col-md-4 col-lg-2 col-xl-2 col-xxl-2">
+
+                        <Navigationsidebar setPassengers={setPassengers} setOrigin={setOrigin}
                                                setDestination={setDestination} setDate={setDate}/>
                         </div>
-                        <div className="col-6" style={{"position": "relative"}}>
-                            <div className="wd-bg-color-black-twitter">
+                        <div className="col-12 col-sm-12 col-md-6" style={{"position": "relative"}}>
+                            <div className="wd-whiteBG">
                                 <TuitList passengers={passengers} origin={origin} destination={destination} date={date} callbackFn={callbackFn}/>
                             </div>
                         </div>
-                        <div className="col-4">
-                            <Deals/>
+                        <div className="col-4 d-none d-sm-none d-md-none d-lg-block col-lg-4 col-xl-4 col-xxl-4">
+
+                        <Deals/>
                         </div>
                     </div>
                 </div>
@@ -57,18 +59,18 @@ const HomeScreen = (callbackFn) => {
                 <div>
 
                     <div className="row mt-2">
-                        <div className="col-2">
+                        <div className="col-2 d-none d-sm-none d-md-block col-md-4 col-lg-2 col-xl-2 col-xxl-2">
                             <Navigationsidebar setPassengers={setPassengers} setOrigin={setOrigin}
                                                setDestination={setDestination} setDate={setDate}/>
                         </div>
-                        <div className="col-6" style={{"position": "relative"}}>
+                        <div className="col-12 col-sm-12 col-md-6" style={{"position": "relative"}}>
                             <div className="wd-bg-color-black-twitter">
                                 <TuitList passengers={passengers} origin={origin} destination={destination} date={date}
                                           callbackFn={callbackFn}
                                 userdata = {location.state}/>
                             </div>
                         </div>
-                        <div className="col-4">
+                        <div className="col-4 d-none d-sm-none d-md-none d-lg-block col-lg-4 col-xl-4 col-xxl-4">
                                 <Deals/>
                             <Mybookings location = {location}/>
                         </div>

@@ -24,19 +24,19 @@ const OtherBookingItem = ({booking}) => {
                 <div className="row mt-2">
                     <Link to = "/profile" state = {userToSend}>
                     <label
-                        className="wd-fg-color-white h6 fw-bold">{booking.user} booked for</label>
+                        className="wd-fg-color-blue h6 fw-bold">{booking.user} booked for</label>
                     </Link>
                 </div>
                 <div className="row mt-2">
                     <div className="col-2 ps-3 me-3" style={{width: '100%'}}>
                         <label
-                            className="wd-fg-color-white h6 fw-bold">{booking.booking.airlineName}&nbsp;</label>
+                            className="wd-fg-color-blue h6 fw-bold">{booking.booking.airlineName}&nbsp;</label>
                         <label
                             className="wd-topic wd-fg-color-light-gray">&nbsp; {booking.booking.flightNumber}</label>
                     </div>
                 </div>
                 <div className="row border-bottom border-secondary">
-                    <div className="col-2"><b>{booking.booking.originCode}</b></div>
+                    <div className="col-2 wd-blueFont"><b>{booking.booking.originCode}</b></div>
                     <div className="col-2">
                     <span className="plane">
                         <svg
@@ -67,8 +67,8 @@ const OtherBookingItem = ({booking}) => {
                         </svg>
                     </span>
                     </div>
-                    <div className="col-3"><b>{booking.booking.destinationCode}</b></div>
-                    <div className="col-3"><b>${booking.booking.price}</b></div>
+                    <div className="col-3 wd-blueFont"><b>{booking.booking.destinationCode}</b></div>
+                    <div className="col-3 wd-blueFont"><b>${booking.booking.price}</b></div>
                 </div>
             </div>
         </>

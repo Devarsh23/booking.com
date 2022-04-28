@@ -38,23 +38,24 @@ const Login = ({usertype}) => {
     }
 
     return (
-        <div className="col-4">
-            <form>
-                <h3>Sign In</h3>
+        <div className="container col-12 col-sm-10 col-md-8 col-lg-6 col-xl-4 col-xxl-4 mt-5 p-5 wd-blueBG">
+
+        <form>
+                <h3 className="wd-whiteFont">Sign In</h3>
 
                 <div className="form-group">
-                    <label>Email address</label>
+                    <label className="wd-fontBold" >Email address</label>
                     <input type="email" className="form-control" placeholder="Enter email" onChange={event =>
                         setemail(event.target.value)}/>
                 </div>
 
                 <div className="form-group">
-                    <label>Password</label>
-                    <input type="password" className="form-control" placeholder="Enter password" onChange={event =>
+                    <label className="wd-fontBold" >Password</label>
+                    <input type="password" className="form-control border" placeholder="Enter password" onChange={event =>
                         setpassword(event.target.value)}/>
                 </div>
                 <br></br>
-                <button type="submit" className="btn btn-primary btn-block" onClick={useSubmitted}>Submit</button>
+                <button type="submit" className="btn btn-primary btn-block wd-fontBold" onClick={useSubmitted}>Submit</button>
                 <br></br>
                 <label>New User? <Link to={{pathname: `/${usertype}/register`}}>Click here to Register as new {usertype}</Link>
                     </label>

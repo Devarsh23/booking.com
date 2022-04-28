@@ -5,7 +5,7 @@ const DealItems = ({deal}) => {
         <>
             <li className="list-group-item">
                 <label className="h6 ps-2">{deal['discount']} off on {deal.airlines}</label>
-                <button className="rounded-pill float-end btn-primary">View</button>
+                <button className="rounded-pill float-end btn-primary">Apply</button>
             </li>
         </>
     );

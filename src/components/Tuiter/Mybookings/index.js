@@ -20,7 +20,7 @@ const Mybookings = ({location}) => {
     return (
         <>
             <ul className="list-group mt-5">
-                    <h5>My Bookings</h5>
+                    <h5 className="wd-blueFont">My Bookings</h5>
                 {
                     bookingDataOfUser.map(booking => {
                         return(<BookingItems key = {booking._id} booking={booking}/>);

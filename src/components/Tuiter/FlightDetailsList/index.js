@@ -6,7 +6,7 @@ const FlightDetailsList = ({flightDetails}) => {
     console.log("flightDetails list --> ", flightDetails);
     return(
         <>
-            <div className="container">
+            <div className="container ">
                 <div className="row mt-2">
                     <div className="col-2 ps-3 me-3" style={{width:'100%'}}>
                         <label className="wd-fg-color-white h6 fw-bold">{flightDetails?.legs?.carriers?.marketing?.airlineName}&nbsp;</label>
@@ -27,7 +27,7 @@ const FlightDetailsList = ({flightDetails}) => {
                             textRendering="geometricPrecision"
                             viewBox="0 0 500 500"
                             xmlns="http://www.w3.org/2000/svg">
-                          <g stroke="#222">
+                          <g stroke="#fff">
                             <line
                                 fill="none"
                                 strokeLinecap="round"
@@ -38,7 +38,7 @@ const FlightDetailsList = ({flightDetails}) => {
                                 y2="390"/>
                             <path
                                 d="M98 325c-9 10 10 16 25 6l311-156c24-17 35-25 42-50 2-15-46-11-78-7-15 1-34 10-42 16l-56 35 1-1-169-31c-14-3-24-5-37-1-10 5-18 10-27 18l122 72c4 3 5 7 1 9l-44 27-75-15c-10-2-18-4-28 0-8 4-14 9-20 15l74 63z"
-                                fill="#222"
+                                fill="#fff"
                                 strokeLinejoin="round"
                                 strokeWidth="10"/>
                           </g>
@@ -54,11 +54,7 @@ const FlightDetailsList = ({flightDetails}) => {
                     <div>Duration of flight - {flightDetails?.legs?.durationInMinutes} Minutes</div>
                     <div>Number of stops - {flightDetails?.legs?.stopCount} </div>
                 </div>
-                <div className= "border-top border-secondary">
-                    <Link to="/login">
-                        <button className="primary rounded-pill mt-2">Book</button>
-                    </Link>
-                </div>
+
             </div>
         </>
     );

@@ -28,8 +28,8 @@ const AdminPage = () => {
         return (
             <>
                 <HeaderComponent location={location}/>
-                <div className="col-4">
-                    <h3>WELCOME TO ADMIN DEALS POSTING PAGE</h3>
+                <div className="col-xxl-6 col-xl-7 col-lg-8 col-md-9 col-sm-10 col-10 wd-blueBG p-5 container ">
+                    <h3 className="fw-bold">WELCOME TO ADMIN DEALS POSTING PAGE</h3>
                     <form>
                         <div className="form-group">
                             <label>Discount in Percentage </label>
@@ -49,7 +49,7 @@ const AdminPage = () => {
                                 setCreditCard(event.target.value)}/>
                         </div>
                         <br></br>
-                        <button type="submit" className="btn btn-primary btn-block" onClick={submitted}>Sign Up</button>
+                        <button type="submit" className="btn btn-primary btn-block" onClick={submitted}>Post Deal</button>
                     </form>
                 </div>
             </>

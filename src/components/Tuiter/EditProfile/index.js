@@ -51,7 +51,7 @@ const EditProfile = () => {
         <>
             <div>
                 <div className="row mt-2">
-                    <div className="col-8" style={{"position": "relative"}}>
+                    <div className="col-8 wd-blueBG p-3" style={{"position": "relative"}}>
                         <div className="mt-2 row">
                             <div className="col-1 ps-2">
                                 <i className="fa ms-2" onClick={() => navigate("/tuiter/profile")}>&#xf00d;</i>
@@ -63,21 +63,15 @@ const EditProfile = () => {
                                 </button>
                             </div>
                         </div>
-                        <div className="wd-container">
-                            <img src={profile?.bannerPicture} className="wd-main"></img>
-                            <img src={profile?.profilePicture} className="rounded-pill wd-border-black wd-overlay"></img>
-                            <button type="button" className="btn rounded-pill wd-right mt-3 me-3 wd-color-black">Edit Profile
-                            </button>
-                        </div>
-                        <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-                        <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+
+
                         <div className="ms-3">
                             <div>
                                 <label>Name</label>
                                 <br></br>
                                 <textarea defaultValue={userDataToSend?.firstname} onChange={(event) =>
                                     setOldProfile({...oldProfile, firstname: event.target.value})}
-                                          style={{width: "90%", color: "white", padding: "0px", backgroundColor: "black",
+                                          style={{width: "90%", color: "black", padding: "0px", backgroundColor: "white",
                                               border:"solid", borderColor:"gray"}}>
                     </textarea>
 
@@ -86,7 +80,7 @@ const EditProfile = () => {
                                 <br></br>
                                 <textarea defaultValue={userDataToSend?.location} onChange={(event) =>
                                     setOldProfile({...oldProfile, location: event.target.value})}
-                                          style={{width: "90%", color: "white", padding: "0px", backgroundColor: "black",
+                                          style={{width: "90%", color: "black", padding: "0px", backgroundColor: "white",
                                               border:"solid", borderColor:"gray"}}>
                     </textarea>
 
@@ -95,7 +89,7 @@ const EditProfile = () => {
                                 <br></br>
                                 <textarea defaultValue={userDataToSend?.dateOfBirth} onChange={(event) =>
                                     setOldProfile({...oldProfile, dateOfBirth: event.target.value})}
-                                          style={{width: "90%", color: "white", padding: "0px", backgroundColor: "black",
+                                          style={{width: "90%", color: "black", padding: "0px", backgroundColor: "white",
                                               border:"solid", borderColor:"gray"}}>
                     </textarea>
                             </div>

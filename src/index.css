@@ -1,13 +1,239 @@
+
 body {
+  background-color: white;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  monospace;
+}
+
+:root {
+  --white: #FFFFFF ;
+  --lightestGrey: #F6F6F6;
+  --lightGrey: rgb(110, 118, 125);
+  --darkGrey: rgb(47, 51, 54);
+  --lightBlue: rgb(29,161,242);
+  --twitterBlue: dodgerblue;
+  background-color: white !important;
+}
+
+container {
+  background-color: white;
+}
+
+.wd-flex {display: flex}
+.wd-flex-inline {display: flex; display: inline-flex;}
+
+.wd-flex-row {display: flex; flex-direction: row;}
+.wd-flex-column {display: flex; flex-direction: column;}
+.wd-flex-rowReverse {display: flex; flex-direction: row-reverse;}
+.wd-flex-columnReverse {display: flex; flex-direction: column-reverse;}
+
+.wd-flex-wrap {display: flex; flex-wrap: wrap;}
+.wd-flex-noWrap {display: flex; flex-wrap: nowrap;}
+
+.wd-flex-alignStart {display: flex; align-items: flex-start;}
+.wd-flex-alignEnd {display: flex; align-items: flex-end;}
+.wd-flex-alignCenter {display: flex; align-items: center;}
+.wd-flex-alignStretch {display: flex; align-items: stretch;}
+
+.wd-flex-justifyStart {display: flex; justify-content: flex-start;}
+.wd-flex-justifyCenter {display: flex; justify-content: center;}
+.wd-flex-justifyEnd {display: flex; justify-content: flex-end;}
+.wd-flex-justifySpaceBetween {display: flex; justify-content: space-between;}
+.wd-flex-justifySpaceAround {display: flex; justify-content: space-around;}
+.wd-flex-justifySpaceEvenly {display: flex; justify-content: space-evenly;}
+
+.wd-font10 {font-size: 10px}
+.wd-font12 {font-size: 12px !important}
+.wd-font13 {font-size: 13px !important}
+.wd-font14 {font-size: 14px !important}
+.wd-font15 {font-size: 15px !important}
+.wd-font16 {font-size: 16px}
+.wd-font18 {font-size: 18px}
+.wd-font20 {font-size: 20px}
+
+.wd-fontBold {font-weight: bold}
+.wd-fontItalic {font-style: italic}
+.wd-fontFamily {font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif}
+.wd-textCenter {text-align: center}
+.wd-textLeft {text-align: left}
+.wd-textRight {text-align: right}
+
+.wd-whiteFont {color:var(--white) !important;}
+.wd-blackFont {color:var(--black);}
+.wd-lightGreyFont {color:var(--lightGrey);}
+.wd-darkGreyFont {color:var(--darkGrey);}
+.wd-lightBlueFont {color:var(--lightBlue) !important;}
+.wd-twitterBlueFont {color:var(--twitterBlue);}
+
+.wd-floatLeft {float: left;}
+.wd-floatRight {float: right;}
+
+.wd-noMargin {margin: 0px;}
+.wd-noMarginTop {margin-top: 0px;}
+.wd-noMarginRight {margin-right: 0px;}
+.wd-noMarginBottom {margin-bottom: 0px;}
+.wd-noMarginLeft {margin-left: 0px;}
+
+.wd-margin5 {margin: 5px;}
+.wd-marginTop5 {margin-top: 5px;}
+.wd-marginRight5 {margin-right: 5px;}
+.wd-marginBottom5 {margin-bottom: 5px;}
+.wd-marginLeft5 {margin-left: 5px;}
+
+.wd-margin10 {margin: 10px;}
+.wd-marginTop10 {margin-top: 10px;}
+.wd-marginRight10 {margin-right: 10px;}
+.wd-marginBottom10 {margin-bottom: 10px;}
+.wd-marginLeft10 {margin-left: 10px;}
+
+.wd-margin16 {margin: 16px;}
+.wd-marginTop16 {margin-top: 16px;}
+.wd-marginRight16 {margin-right: 16px;}
+.wd-marginBottom16 {margin-bottom: 16px;}
+.wd-marginLeft16 {margin-left: 16px;}
+
+.wd-margin20 {margin: 20px;}
+.wd-marginTop20 {margin-top: 20px;}
+.wd-marginRight20 {margin-right: 20px;}
+.wd-marginBottom20 {margin-bottom: 20px;}
+.wd-marginLeft20 {margin-left: 20px;}
+
+.wd-margin60 {margin: 60px;}
+.wd-marginTop60 {margin-top: 60px;}
+.wd-marginRight60 {margin-right: 60px;}
+.wd-marginBottom60 {margin-bottom: 60px;}
+.wd-marginLeft60 {margin-left: 60px;}
+
+.wd-borderRadius4px {border-radius: 4px}
+.wd-borderRadius10px {border-radius: 10px}
+.wd-borderRadius12px {border-radius: 12px}
+.wd-borderRadius50 {border-radius: 50px !important;}
+.wd-borderRadiusCircle {border-radius: 50% !important;}
+
+.testBorder{ border: 1px solid red;}
+
+.wd-width20 { width: 20px !important;}
+.wd-width100 { width: 100% !important;}
+
+input[type="radio"].wd-navBtn:checked+label {
+  background-color: rgb(42,159, 214);
+  color: black;
+  border-color: black;
+  border-width: 1px;
+  font-weight: bold;
+  border-radius: 0px;
+}
+
+.wd-searchBoxDiv{
+  border: 1px solid var(--darkGrey);
+  width: 100%;
+}
+input.wd-searchBox:focus{ outline: none;}
+
+.wd-borderDiv{ border: 0px;
+  padding-bottom: 10px;}
+
+.wd-followList{ width: 30%;}
+
+.wd-noLinkDecor{ text-decoration: none; color: var(--lightGrey)}
+.wd-noLinkDecor:hover{ text-decoration: underline; color: var(--lightGrey)}
+
+.wd-whiteBG{background-color: white !important}
+.wd-transparentBG {background-color: transparent !important}
+.wd-lightGreyBG {background-color: #F6F6F6 !important}
+.wd-darkGreyBG {background-color: #222222 !important}
+.wd-blackBG {background-color: var(--black) !important}
+.wd-noBorders {border: 0px !important}
+
+.nav-item.nav-link{
+  border: 0px !important;
+  color:white;
+}
+.nav-item.nav-link:hover{
+  border: 0px !important;
+  color: white;
+  font-weight: bold;
+}
+
+.nav-item.nav-link.active{
+  color: white !important;
+}
+
+.wd-whiteButton{
+  background-color: white !important;
+  color: black !important;
+  font-weight: bold !important;
+}
+
+.wd-blueButton{
+  color: white !important;
+}
+
+.list-group-item-action:hover {
+  border-color: transparent !important;
+}
+
+
+.slider-parent{
+  position:relative;
+}
+.buble{
+  position:absolute;
+}
+
+.wd-yellowBG{
+  background-color: #ffcc00;
+}
+
+.wd-blueBG{
+  background-color: #000080 !important;
+}
+
+.wd-blueFont{
+  color: #000080;
+}
+
+.wd-text-size {
+  width: 160px;
+}
+
+.wd-list-group-item .list-group-item{
+  background-color: #000080;
+  border-top: 1px solid #fff;
+  border-left-color: #000000;
+  border-right-color: #fff;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+  background-color: #fff !important;
+  color: #000080 !important;
+  border: 3px solid rgb(42,159, 214) !important;
+}
+
+.primary {
+  background-color: #000080 !important;
+  color: #fff !important;
+
+  border: 3px solid #000 !important;
+}
+
+wd-border {
+  border: 2px solid black;
+}
+
+.d-none {
+  display: none!important;
+}
+
+.wd-button-posright {
+  float:right;
 }
