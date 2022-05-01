@@ -17,6 +17,7 @@ import {Provider} from "react-redux";
 import {combineReducers, createStore} from "redux";
 import tuitsReducer from "./components/Tuiter/reducers/tuits-reducer";
 import whoReducer from "./components/Tuiter/reducers/who-reducer";
+import AllView from "./components/Tuiter/AllView";
 
 import loginReducers from "./components/Tuiter/reducers/login-reducers";
 import dealsReducers from "./components/Tuiter/reducers/deals-reducer";
@@ -41,9 +42,9 @@ function App() {
             <div className="container">
                 <Routes>
                     <Route path="/">
-                        <Route path="tuiter"
+                        <Route path="home"
                                element={<Index/>}>
-                            <Route path = "home"
+                            <Route path = "homeScreen"
                                    element = {<HomeScreen callbackFn = {callbackFn}/>}/>
                             <Route path = "explore"
                                    element = {<ExploreScreen/>}/>
@@ -84,6 +85,9 @@ function App() {
                         </Route>
                         <Route path="/profile"
                         element={<Profile/>}>
+                        </Route>
+                        <Route path="/allview"
+                               element={<AllView/>}>
                         </Route>
                     </Route>
                 </Routes>

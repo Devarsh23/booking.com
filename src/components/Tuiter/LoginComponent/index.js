@@ -26,7 +26,7 @@ const Login = ({usertype}) => {
                         var flag = "true";
                     }
                     else {
-                        navigate('/tuiter/home', {state: data[i]});
+                        navigate('/home/homeScreen', {state: data[i]});
                         var flag = "true";
                     }
                 }

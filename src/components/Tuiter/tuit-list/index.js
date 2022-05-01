@@ -16,6 +16,7 @@ const TuitList = ({passengers, origin, destination, date, callbackFn, userdata})
     //console.log("check --> ", filterData);
     //console.log("tuit from redux -->", filterData?.passengers, filterData?.origin, filterData?.destination, filterData?.date);
     //const test = useSelector(state => state.results);
+    // console.log("test -->",test)
     if (userdata === null) {
         return (
             <ul className="ttr-tuits list-group wd-whiteBG wd-blueFont">

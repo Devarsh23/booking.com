@@ -50,12 +50,13 @@ export const findAirlines = async () => {
 }
 
 export const flightSearchResults = async (details) => {
-    // details.origin = await getCode(details.origin).then(result => result)
-    // details.destination = await getCode(details.destination).then(result => result)
+
     // if (typeof details === 'undefined') {
     //     return {}
     // }
     // else {
+    //     details.origin = await getCode(details.origin).then(result => result)
+    //     details.destination = await getCode(details.destination).then(result => result)
     //     const options = {
     //         method: 'GET',
     //         url: 'https://skyscanner44.p.rapidapi.com/search-extended',
@@ -72,10 +73,9 @@ export const flightSearchResults = async (details) => {
     //         }
     //     };
     //     const response = await axios.request(options);
-    //     console.log("API data --> ",response.data.itineraries.results )
     //     return response.data.itineraries.results;
-    //     return {}
-    //}
+    //     // return {}
+    // }
      return{}
 }
 
@@ -112,7 +112,6 @@ export const createBookings = async (bookings) => {
 }
 
 export const getCode = async (code) => {
-    console.log("Hello check");
     const options = {
         method: 'GET',
         url: 'https://skyscanner44.p.rapidapi.com/autocomplete',
