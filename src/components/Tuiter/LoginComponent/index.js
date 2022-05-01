@@ -26,7 +26,7 @@ const Login = ({usertype}) => {
                         var flag = "true";
                     }
                     else {
-                        navigate('/home/homeScreen', {state: data[i]});
+                        navigate('/', {state: data[i]});
                         var flag = "true";
                     }
                 }

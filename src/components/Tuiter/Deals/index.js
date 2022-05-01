@@ -12,7 +12,6 @@ const Deals = () => {
     // useEffect(() => findDeals(dispatch),[]);
     // console.log(data);
     const dispatch = useDispatch();
-
     useEffect(() => findDeals(dispatch),[]);
     // const findDeals = async () => {
     //     const deals = await service.findDeals();

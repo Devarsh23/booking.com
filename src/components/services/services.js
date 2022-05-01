@@ -5,6 +5,7 @@ const DEALSAPI = 'http://localhost:4000/api/deals';
 const AIRLINESAPI = 'http://localhost:4000/api/airlines';
 const INITIALAPI = 'http://localhost:4000/api/initial';
 const BOOKINGSAPI = 'http://localhost:4000/api/bookings';
+const DISCOUNTAPI = 'http://localhost:4000/api/discount';
 
 export const findDeals = async () => {
     const response = await axios.get(DEALSAPI);
@@ -12,11 +13,13 @@ export const findDeals = async () => {
     const datax = response.data;
     return datax;
 }
+
 export const findLogin = async () => {
     const response = await axios.get(LOGINAPI);
     const datax = response.data;
     return datax;
 }
+
 
 export const createUser = async (user) => {
     try {
@@ -105,11 +108,23 @@ export const findBookings = async () => {
 }
 
 export const createBookings = async (bookings) => {
-    console.log("to be on safer side", bookings);
     const response = await axios.post(BOOKINGSAPI, bookings)
     return response.data;
-
 }
+
+
+export const findAppliedBooking = async () => {
+    const response = await axios.get(DISCOUNTAPI);
+    const datax = response.data;
+    return datax;
+}
+
+export const updateDiscount = async (flag) => {
+    //console.log("AAi gayo", singleValue);
+    const response = await axios.put(`${DISCOUNTAPI}/${flag._id}`,flag);
+    return response.data;
+}
+
 
 export const getCode = async (code) => {
     const options = {

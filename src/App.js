@@ -25,10 +25,11 @@ import AdminPage from "./components/Tuiter/AdminPage";
 import airlineReducers from "./components/Tuiter/reducers/airline-reducers";
 import AirlinePage from "./components/Tuiter/AirlinePage";
 import initialReducer from "./components/Tuiter/reducers/initial-reducer";
+import discountReducer from "./components/Tuiter/reducers/discount-reducer";
 import bookingReducer from "./components/Tuiter/reducers/booking-reducer";
 
 const reducer = combineReducers({
-    tuits: loginReducers, who: whoReducer, deals: dealsReducers, login: loginReducers, airlines: airlineReducers, singleValues: initialReducer, bookings: bookingReducer
+    tuits: loginReducers, who: whoReducer, deals: dealsReducers, login: loginReducers, airlines: airlineReducers, singleValues: initialReducer, bookings: bookingReducer, flag: discountReducer
 });
 const store = createStore(reducer);
 function App() {
@@ -42,9 +43,9 @@ function App() {
             <div className="container">
                 <Routes>
                     <Route path="/">
-                        <Route path="home"
+                        <Route path=""
                                element={<Index/>}>
-                            <Route path = "homeScreen"
+                            <Route path = ""
                                    element = {<HomeScreen callbackFn = {callbackFn}/>}/>
                             <Route path = "explore"
                                    element = {<ExploreScreen/>}/>

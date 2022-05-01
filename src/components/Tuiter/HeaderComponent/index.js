@@ -10,7 +10,7 @@ const HeaderComponent = ({location}) => {
             <>
                 <div className="row mt-3">
                     <div className="col col-xxl-9 col-xl-9 col-lg-7 col-md-6 col-sm-4 col-4">
-                        <h3 className="wd-blueFont"><Link to ="/home/homeScreen"><i className="fa fa-plane wd-blueFont"></i></Link> Book My Flight</h3>
+                        <h3 className="wd-blueFont"><Link to ="/"><i className="fa fa-plane wd-blueFont"></i></Link> Book My Flight</h3>
                     </div>
                     <div className="col wd-blueFont">
                         {location?.state?.firstname} {location?.state?.lastname}
@@ -50,7 +50,7 @@ const HeaderComponent = ({location}) => {
             <>
                 <div className="row mt-3">
                     <div className="col col-xxl-9 col-xl-9 col-lg-7 col-md-6 col-sm-4 col-4">
-                        <h3 className="wd-blueFont"><Link to ="/home/homeScreen" state={location.state}><i className="fa fa-plane wd-blueFont"></i></Link> Book My Flight</h3>
+                        <h3 className="wd-blueFont"><Link to ="/" state={location.state}><i className="fa fa-plane wd-blueFont"></i></Link> Book My Flight</h3>
                     </div>
                     <div className="col wd-blueFont ">
                         Welcome {location?.state?.firstname} {location?.state?.lastname} !

@@ -10,10 +10,11 @@ import initialReducer from "./reducers/initial-reducer";
 import BookingReducer from "./reducers/booking-reducer";
 import dealsReducers from "./reducers/deals-reducer";
 import loginReducers from "./reducers/login-reducers";
+import discountReducer from "./reducers/discount-reducer";
 import HomeScreen from "./home-screen";
 
 const reducer = combineReducers({
-    tuits: tuitsReducer, who: whoReducer, results: apiReducers, singleValue : initialReducer, bookings:BookingReducer, deals: dealsReducers, login:loginReducers
+    tuits: tuitsReducer, who: whoReducer, results: apiReducers, singleValue : initialReducer, bookings:BookingReducer, deals: dealsReducers, login:loginReducers, flags: discountReducer
 });
 const store = createStore(reducer);
 

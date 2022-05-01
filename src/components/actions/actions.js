@@ -1,4 +1,5 @@
 import * as service from "../services/services"
+import DealItems from "../Tuiter/Deals/dealItems";
 
 export const FIND_LOGIN = 'FIND_LOGIN';
 export const CREATE_USER = 'CREATE_USER';
@@ -12,6 +13,9 @@ export const SINGLE_INITIAL_VALUES = 'SINGLE_INITIAL_VALUES';
 export const FIND_BOOKINGS = 'FIND_BOOKINGS';
 export const CREATE_BOOKINGS = 'CREATE_BOOKINGS';
 export const UPDATE_USERS = 'UPDATE_USERS';
+export const FIND_DISCOUNT = 'FIND_DISCOUNT';
+export const UPDATE_DISCOUNT = 'UPDATE_DISCOUNT';
+
 
 
 export const findlogin = async(dispatch) => {
@@ -74,4 +78,14 @@ export const findBookings = async(dispatch) => {
 export const createNewBookings = async(dispatch, bookings) => {
     const newBooking = await service.createBookings(bookings);
     dispatch({type: CREATE_BOOKINGS, newBooking})
+}
+
+
+export const findDiscountValue = async(dispatch) => {
+    const discountValue = await service.findAppliedBooking();
+    dispatch({type: FIND_DISCOUNT, discountValue})
+}
+export const updateDiscount = async(dispatch, flag) => {
+    const response = await service.updateDiscount(flag);
+    dispatch({type: UPDATE_DISCOUNT, flag})
 }

@@ -33,7 +33,7 @@ const FlightDetails = ({flightDetails}) => {
     function submitted () {
         createNewBookings(dispatch, {user,booking});
         alert("Booking added to your profile");
-        navigate('/home/homeScreen', {state: location.state});
+        navigate('/', {state: location.state});
     }
     let flightDataToSend = [];
     var AirlineToSearch = flightDetails.legs[0].carriers.marketing[0].name;
