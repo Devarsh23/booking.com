@@ -237,3 +237,10 @@ wd-border {
 .wd-button-posright {
   float:right;
 }
+::placeholder{
+  text-align: justify-all;
+}
+
+.wd-px{
+  padding-left: 55px !important;
+}

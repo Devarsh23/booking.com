@@ -17,15 +17,15 @@ const AllviewList = ({data}) => {
                 <div className="container">
 
                     <div className="row mt-2">
-                        <div className="col-2 ps-3 me-3" style={{width: '100%'}}>
+                        <div className="col-10 col-sm-10 col-md-9 col-lg-6 col-xl-4 col-xxl-4 ps-3 me-3" style={{width: '100%'}}>
                             <label
-                                className="wd-fg-color-blue h6 fw-bold">{data?.firstname}&nbsp;</label>
-                            <label
-                                className="wd-topic wd-fg-color-light-gray">&nbsp; {data?.lastname}</label>
+                                className="wd-fg-color-blue h6 fw-bold">{data?.firstname}&nbsp; {data?.lastname}</label>
+                            {/*<label*/}
+                            {/*    className="wd-topic wd-blueFont h6 fw-bold">&nbsp; {data?.lastname}</label>*/}
                         </div>
                     </div>
                     <div className="row border-bottom border-secondary">
-                        <div className="col-2 wd-blueFont"><b>{data.email}</b></div>
+                        <div className="col-10 col-sm-10 col-md-9 col-lg-6 col-xl-4 col-xxl-4 wd-blueFont"><b>{data.email}</b></div>
                         <div className="col-2">
                     <span className="plane">
                         <svg

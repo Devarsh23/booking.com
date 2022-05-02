@@ -69,7 +69,7 @@ const SignUp = ({userStatus}) => {
             <form>
                 <div className="form-group">
                     <label className="wd-fontBold">First name</label>
-                    <input type="text" className="form-control border" placeholder="First name" onChange={event =>
+                    <input type="text" className="form-control border pl-2" placeholder="First name" onChange={event =>
                         setfirstname(event.target.value)}/>
                 </div>
 
@@ -81,18 +81,18 @@ const SignUp = ({userStatus}) => {
 
                 <div className="form-group">
                     <label className="wd-fontBold">Email address</label>
-                    <input type="email" className="form-control border" placeholder="Enter email" onChange={event =>
+                    <input type="email" className="form-control border wd-px" placeholder="Enter email" onChange={event =>
                         setemail(event.target.value)} />
                 </div>
 
                 <div className="form-group">
                     <label className="wd-fontBold" >Password</label>
-                    <input type="password" className="form-control" placeholder="Enter password" onChange={event =>
+                    <input type="password" className="form-control wd-px" placeholder="Enter password" onChange={event =>
                         setpassword(event.target.value)}/>
                 </div>
                 <div className="form-group">
                     <label className="wd-fontBold" >Date Of Birth</label>
-                    <input type="date" className="form-control" placeholder="Enter DOB" onChange={event =>
+                    <input type="date" className="form-control wd-px" placeholder="Enter DOB" onChange={event =>
                         setDateOfBirth(event.target.value)}/>
                 </div>
                 <div className="form-group">

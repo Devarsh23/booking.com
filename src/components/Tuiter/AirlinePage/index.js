@@ -65,7 +65,7 @@ const AirlinePage = () => {
                     <form>
                         <div className="form-group">
                             <label>Enter Flight Number</label>
-                            <input type="number" className="form-control" placeholder="Flight Number" onChange={event =>
+                            <input type="number" className="form-control wd-px" placeholder="Flight Number" onChange={event =>
                                 setFlightNumber(event.target.value)}/>
                         </div>
                         <div className="form-group">
@@ -102,7 +102,7 @@ const AirlinePage = () => {
 
                         <div className="form-group">
                             <label>Price</label>
-                            <input type="number" className="form-control" placeholder="Price" onChange={event =>
+                            <input type="number" className="form-control wd-px" placeholder="Price" onChange={event =>
                                 setPrice(event.target.value)}/>
                         </div>
 
@@ -126,7 +126,7 @@ const AirlinePage = () => {
 
                         <div className="form-group">
                             <label>Stop Count</label>
-                            <input type="number" className="form-control" placeholder="Stop Count" onChange={event =>
+                            <input type="number" className="form-control wd-px" placeholder="Stop Count" onChange={event =>
                                 setStopCount(event.target.value)}/>
                         </div>
 

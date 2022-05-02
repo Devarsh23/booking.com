@@ -59,7 +59,7 @@ const TuitListItem = ({param, callbackFn, userdata, discountData}) => {
                         </svg>
                     </span>
                         </div>
-                        <div className="col-3"><b>{param.legs[0].destination.displayCode}</b></div>
+                        <div className="col-3"><b> {param.legs[0].destination.displayCode}</b></div>
                         <div className="col-3"><b><s>${param.pricing_options[0].price.amount}</s></b>
                             </div>
                         <div className="col-2">
@@ -84,7 +84,7 @@ const TuitListItem = ({param, callbackFn, userdata, discountData}) => {
                         </div>
                     </div>
                     <div className="row border-bottom border-secondary">
-                        <div className="col-2"><b>{param.legs[0].origin.displayCode}</b></div>
+                        <div className="col-2"><b> {param.legs[0].origin.displayCode}</b></div>
                         <div className="col-2">
                     <span className="plane">
                         <svg

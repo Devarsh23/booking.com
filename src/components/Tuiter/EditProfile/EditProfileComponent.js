@@ -18,14 +18,14 @@ const EditProfileComponent = ({profile}) => {
         dispatch({type: 'update-profile',
             profile: oldProfile
         });
-        navigate("/tuiter/profile")
+        navigate("/profile")
     }
     const dispatch = useDispatch();
     return (
         <>
             <div className="mt-2 row">
                 <div className="col-1 ps-2">
-                    <i className="fa ms-2" onClick={() => navigate("/tuiter/profile")}>&#xf00d;</i>
+                    <i className="fa ms-2" onClick={() => navigate("/profile")}>&#xf00d;</i>
                 </div>
                 <div className="col-11 ps-2">
                     <label className="wd-color-white"><b>{profile.name}</b></label>

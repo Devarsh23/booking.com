@@ -36,7 +36,7 @@ const Navigationsidebar = ({setPassengers, setOrigin, setDestination, setDate}) 
                 <br></br>
                 <div>
                     <label htmlFor="origin">Origin</label>
-                    <input className=" wd-width100 wd-textLeft"  type="text" id="origin" placeholder="Origin" onChange={event =>
+                    <input className=" wd-width100"  type="text" id="origin" placeholder="Origin" onChange={event =>
                         setorigin(event.target.value)
                     }>
                     </input>

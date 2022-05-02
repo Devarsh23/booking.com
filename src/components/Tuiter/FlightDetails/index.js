@@ -109,9 +109,9 @@ const FlightDetails = ({flightDetails}) => {
                     </div>
                 </div>
                     <br/>
-                    <div className="container wd-fg-color-white  card p-5 mt-5 wd-blueBG">
+                    <div className="container wd-fg-color-blue  card p-5 mt-5 wd-whiteBG">
 
-                        <h5> More flights from the same Airline. </h5><br/>
+                        <h5 className="wd-fg-color-blue wd-fontBold"> More flights from the same Airline: </h5><br/>
                         <ul>
                             {
                                 flightDataToSend.map && flightDataToSend.map(param => <FlightDetailsList key={param._id}
@@ -186,9 +186,9 @@ const FlightDetails = ({flightDetails}) => {
                 </div>
 
                 <br/>
-                <div className="container wd-fg-color-white  card p-5 mt-5 wd-blueBG">
+                <div className="container wd-fg-color-blue  card p-5 mt-5 wd-whiteBG">
 
-                    <h5> More flights from the same Airline. </h5><br/>
+                    <h5 className="wd-blueFont wd-fontBold"> More flights from the same Airline: </h5><br/>
                     <ul>
                         {
                             flightDataToSend.map && flightDataToSend.map(param => <FlightDetailsList key={param._id}
