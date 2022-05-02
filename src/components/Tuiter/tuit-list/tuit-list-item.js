@@ -61,9 +61,7 @@ const TuitListItem = ({param, callbackFn, userdata, discountData}) => {
                         </div>
                         <div className="col-3"><b>{param.legs[0].destination.displayCode}</b></div>
                         <div className="col-3"><b><s>${param.pricing_options[0].price.amount}</s></b>
-                            <br></br>
-                            <b>${q}</b>
-                        </div>
+                            </div>
                         <div className="col-2">
                             <Link to={{pathname: `/details/${param.id}`}}>
                                 <button className="primary rounded-pill" onClick={update.bind(this, param)}>Details
