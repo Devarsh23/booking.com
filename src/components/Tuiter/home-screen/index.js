@@ -31,12 +31,12 @@ const HomeScreen = (callbackFn) => {
                 </div>
                 <div className=" container wd-whiteBG">
                     <div className="row mt-2">
-                        <div className="col-2 d-none d-sm-none d-md-block col-md-4 col-lg-2 col-xl-2 col-xxl-2">
+                        <div className="col-2 d-none d-sm-none d-md-block col-md-4 col-lg-3 col-xl-3 col-xxl-2">
 
                         <Navigationsidebar setPassengers={setPassengers} setOrigin={setOrigin}
                                                setDestination={setDestination} setDate={setDate}/>
                         </div>
-                        <div className="col-12 col-sm-12 col-md-6" style={{"position": "relative"}}>
+                        <div className="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-5 col-xxl-6" style={{"position": "relative"}}>
                             <div className="wd-whiteBG">
                                 <TuitList passengers={passengers} origin={origin} destination={destination} date={date} callbackFn={callbackFn}/>
                             </div>
@@ -59,11 +59,11 @@ const HomeScreen = (callbackFn) => {
                 <div>
 
                     <div className="row mt-2">
-                        <div className="col-2 d-none d-sm-none d-md-block col-md-4 col-lg-2 col-xl-2 col-xxl-2">
+                        <div className="col-2 d-none d-sm-none d-md-block col-md-4 col-lg-3 col-xl-3 col-xxl-2">
                             <Navigationsidebar setPassengers={setPassengers} setOrigin={setOrigin}
                                                setDestination={setDestination} setDate={setDate}/>
                         </div>
-                        <div className="col-12 col-sm-12 col-md-6" style={{"position": "relative"}}>
+                        <div className="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-5 col-xxl-6" style={{"position": "relative"}}>
                             <div className="wd-bg-color-black-twitter">
                                 <TuitList passengers={passengers} origin={origin} destination={destination} date={date}
                                           callbackFn={callbackFn}

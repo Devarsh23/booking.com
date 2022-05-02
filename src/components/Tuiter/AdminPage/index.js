@@ -33,7 +33,7 @@ const AdminPage = () => {
                     <form>
                         <div className="form-group">
                             <label>Discount in Percentage </label>
-                            <input type="number" className="form-control" placeholder="discount in %" onChange={event =>
+                            <input type="number" className="form-control wd-px" placeholder="discount in %" onChange={event =>
                                 setdiscount(event.target.value)}/>
                         </div>
 

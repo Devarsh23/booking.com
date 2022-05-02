@@ -20,7 +20,7 @@ const ProfileComponent = ({profile}) => {
                 <img src={profile.bannerPicture} className="wd-main"></img>
                 <img src={profile.profilePicture} className="rounded-pill wd-border-black wd-overlay"></img>
                 <button type="button" className="btn rounded-pill wd-right border-secondary mt-3 me-3"
-                        onClick={() => navigate("/tuiter/edit-profile")}>Edit Profile
+                        onClick={() => navigate("/edit-profile")}>Edit Profile
                 </button>
 
             </div>

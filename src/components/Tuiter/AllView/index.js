@@ -15,7 +15,7 @@ const AllView = () => {
     return (
         <>
             <ul className="list-group mt-5">
-                <h5 className="wd-blueFont">Other People Bookings</h5>
+                <h5 className="wd-blueBG wd-whiteFont wd-fontBold p-4">All Users:</h5>
                 {
                      data.map(booking => {
                          return(<AllviewList key = {booking._id} data={booking}/>);

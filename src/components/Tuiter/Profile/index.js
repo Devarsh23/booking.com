@@ -29,22 +29,20 @@ const Profile = () => {
             <>
                 <div>
                     <div className="row mt-2 ">
-                        <div className="col-8 wd-blueBG" style={{"position": "relative"}}>
-
-                            <div className="mt-2 row">
-                                <label className="wd-whiteFont"><b>{userDataToSend?.firstname}</b></label>
-                                <label className="wd-whiteFont"><b>{userDataToSend?.lastname}</b></label>
-                                <label className="wd-whiteFont"><b>{userDataToSend?.email}</b></label>
-                                <br/>
-                                <label className="wd-font wd-whiteFont">500 Bookings</label>
+                        <div className="col-12 col-sm-12 col-md-10 col-lg-8 col-xl-8 col-xxl-8 " style={{"position": "relative"}}>
 
 
 
-
-
-
-
-                                </div>   <br/><br/><br/> <br/>
+                            <div>
+                                <img
+                                    src="https://www.wekatravel.com/wp-content/uploads/2017/10/banner-flights.jpg"
+                                    width="100%"
+                                    style={{
+                                        position: "relative",
+                                    }}
+                                    alt=""
+                                />
+                            </div>
 
                             <div className="wd-container ">
                                 <img
@@ -61,8 +59,18 @@ const Profile = () => {
                                 />
                             </div>
 
-                            <br></br><br></br><br></br><br></br>
-                            <div className="ms-3 wd-whiteFont">
+                            <br></br><br></br><br></br>
+
+                            <div className="mt-2 row ">
+                                <label className="wd-blueFont"><b>{userDataToSend?.firstname} {userDataToSend?.lastname}</b></label>
+                                {/*<label className="wd-blueFont"><b>{userDataToSend?.lastname}</b></label>*/}
+                                <label className="wd-blueFont"><b>{userDataToSend?.email}</b></label>
+                                <br/>
+                                <label className="wd-font wd-blueFont">500 Bookings</label>
+
+                            </div>
+
+                            <div className="ms-3 wd-blueFont">
 
                                 <label>@{userDataToSend?.firstname}</label> &nbsp;&nbsp;
                                 <i className="fas fa-map-marker-alt me-2"></i><label>{userDataToSend?.location}</label>&nbsp; &nbsp;
@@ -86,21 +94,26 @@ const Profile = () => {
             <>
                 <div>
                     <div className="row mt-2  ">
-                        <div className="col-8 wd-blueBG" style={{"position": "relative"}}>
+                        <div className="col-12 col-sm-12 col-md-10 col-lg-8 col-xl-8 col-xxl-8" style={{"position": "relative"}}>
                             {/*{*/}
                             {/*    profile.map(id=>*/}
                             {/*        <ProfileComponent key={id.dateOfBirth} profile={id}/>*/}
                             {/*    )*/}
                             {/*}*/}
 
-                            <div className="mt-2 row">
-                                <label className="wd-whiteFont"><b>{userDataToSend?.firstname}</b></label>
-                                <label className="wd-whiteFont"><b>{userDataToSend?.lastname}</b></label>
-                                <label className="wd-whiteFont"><b>{userDataToSend?.email}</b></label>
-                                <br></br>
-                                <label className="wd-font wd-whiteFont">1000 Bookings</label>
+
+                            <div>
+                                <img
+                                    src="https://www.wekatravel.com/wp-content/uploads/2017/10/banner-flights.jpg"
+                                    width="100%"
+
+                                    style={{
+                                        position: "relative",
+                                    }}
+                                    alt=""
+                                />
                             </div>
-                            <br/><br/><br/> <br/>
+
                             <div className="wd-container ">
                                 <img
                                     src="https://media.istockphoto.com/vectors/user-icon-human-person-symbol-social-profile-icon-avatar-login-sign-vector-id1316420668?k=20&m=1316420668&s=612x612&w=0&h=Z2cc0HZXkovLCVmoJ8LCIG5eWMetgOX9oLe-lF0OWJM="
@@ -115,16 +128,20 @@ const Profile = () => {
                                     alt=""
                                 />
 
-
+                            </div>
+                            <br/><br/><br/>
+                            <div className="mt-2 row">
+                                <label className="wd-blueFont"><b>{userDataToSend?.firstname} {userDataToSend?.lastname}</b></label>
+                                {/*<label className="wd-blueFont"><b>{userDataToSend?.lastname}</b></label>*/}
+                                <label className="wd-blueFont"><b>{userDataToSend?.email}</b></label>
+                                <label className="wd-font wd-blueFont">1000 Bookings</label>
                             </div>
                             <button type="button" className="btn-primary rounded-pill wd-right border-secondary mt-3 me-3"
-                                    onClick={() => navigate("/tuiter/edit-profile", {state: location.state})}>Edit
+                                    onClick={() => navigate("/edit-profile", {state: location.state})}>Edit
                                 Profile
                             </button>
-                            <br/>
-                            <div className="ms-3 wd-whiteFont">
-                                <br/><br/> <br/>
-
+                            <div className="ms-3 wd-blueFont">
+                                <br/>
                                 <label>@{userDataToSend?.firstname} </label>&nbsp;&nbsp;
                                 <i className="fas fa-map-marker-alt me-2"></i><label>{userDataToSend?.location}</label>&nbsp;&nbsp;
                                 <i className="fas fa-golf-ball ms-2 me-2"></i><label>Born {userDataToSend?.dateOfBirth}</label>&nbsp;&nbsp;
@@ -134,7 +151,7 @@ const Profile = () => {
 
 
                         </div>
-                        <div className="col-4 col-md-4 col-lg-4 col-l-4 col-xxl-4">
+                        <div className="d-none d-lg-block col-lg-4 col-xl-4 col-xxl-4">
                             <Deals/>
                             <Mybookings location={location}/>
                         </div>
