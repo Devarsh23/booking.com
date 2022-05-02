@@ -28,7 +28,7 @@ const Navigationsidebar = ({setPassengers, setOrigin, setDestination, setDate}) 
                 {/*<form>*/}
                 <div>
                     <label htmlFor="numberOfPassengers">Number of Passengers</label>
-                    <input className=" wd-width100 wd-textCenter"  type="number" id="numberOfPassengers" placeholder="1" onChange={event =>
+                    <input className=" wd-width100 wd-textCenter"  type="number" id="numberOfPassengers" placeholder="Num" onChange={event =>
                         setpassengers(event.target.value)
                     }>
                     </input>
